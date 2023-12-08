@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview &#8212; Computing in Physics (Phy446)</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dirac Notation" href="0-DiracNotation.html" />
+    <link rel="prev" title="Other Interesting Automata" href="../CellularAutomata/OtherAutomata.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Computing in Physics (Phy446)</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Setting up
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../GettingStarted.html">
+   Getting Setup
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Cellular Automata
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CellularAutomata/CellularAutomata.html">
+   Cellular Automata
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CellularAutomata/Sand.html">
+   Sand
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CellularAutomata/OtherAutomata.html">
+   Other Interesting Automata
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Quantum Computing
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="0-DiracNotation.html">
+   Dirac Notation
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="1a-QuantumComputingSimulator.html">
+   QC Simulator II
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1b-QuantumComputingSimulator.html">
+     QC Simulator I(abcd)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NonAtomicGates.html">
+   Non-atomic gates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="PhaseEstimation.html">
+   Phase estimation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="QFT.html">
+   Quantum Fourier Transform
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Shor-Overview.html">
+   Shor’s Algorithm
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Shor-Classical.html">
+     Shor’s Algorithm (classically)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Shor-Quantum.html">
+     Quantum Matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ModularMultiplication.html">
+     Modular Multiplication
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Shor-QuantumCircuit.html">
+     Shor’s Algorithm
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Quantum Computing (extensions)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Gates.html">
+   Gates
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ClassicalGates.html">
+     Classical Gates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ControlledGates.html">
+     Controlled Gates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Universal.html">
+     Gates for any Unitary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BQPinPSPACE.html">
+   BQP in PSPACE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Ising Model
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/IsingModel.html">
+   Simulating an Ising Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/Measure.html">
+   Measuring the Ising Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/RG.html">
+   The Renormalization Group
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/ParallelTempering.html">
+   Extra Credit: Parallel Tempering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/SimulatedAnnealing.html">
+   Extra Credit: Simulated Annealing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ML/Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ML/Hopfield.html">
+   Hopfield Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ML/RBM.html">
+   Restricted Boltzmann Machines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ML/Diffusion.html">
+   Generative Diffusion Models
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Topological Insulators
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/Lattice.html">
+   Lattices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/TightBinding.html">
+   Tight Binding Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/ChernInsulators.html">
+   Topological Insulators
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shor-s-algorithm">
+   Shor’s Algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-extensions">
+   Other Extensions
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Overview</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shor-s-algorithm">
+   Shor’s Algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-extensions">
+   Other Extensions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h1>
+<p>Here is an overview of paths through the quantum computing section.</p>
+<p><strong>Anything which is extra credit should be skipped until the end.  Nothing cumulatively builds on these and so to reach the plateau of this assignment and to maximize points you should leave them until the end!</strong></p>
+<p><strong>Template for Solution Document:</strong> <a class="reference external" href="https://docs.google.com/document/d/16SjjSvR1M8UsBODIqGr59LBb-UaDIEG_1CzB4-wrKeY/edit">https://docs.google.com/document/d/16SjjSvR1M8UsBODIqGr59LBb-UaDIEG_1CzB4-wrKeY/edit</a></p>
+<p><strong>Note this assignment is out of 110 points (so you final score is x/110 where x is the points you earned)</strong></p>
+<div class="section" id="shor-s-algorithm">
+<h2>Shor’s Algorithm<a class="headerlink" href="#shor-s-algorithm" title="Permalink to this headline">#</a></h2>
+<p><em><strong>Week 1: Build a quantum computing simulator</strong></em></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="0-DiracNotation.html"><span class="doc std std-doc">Dirac Notation</span></a> (<em>10 points</em>)</p></li>
+<li><p><a class="reference internal" href="1a-QuantumComputingSimulator.html"><span class="doc std std-doc">Quantum Computing Simulator II</span></a> (<em>10 points</em>)</p>
+<ul>
+<li><p><a class="reference internal" href="1b-QuantumComputingSimulator.html"><span class="doc std std-doc">Quantum Computing Simulator I(abcd)</span></a> : (<em>10 points</em>)</p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="NonAtomicGates.html"><span class="doc std std-doc">Non-atomic Gates</span></a> (<em>10 points</em>)</p></li>
+</ul>
+<p><em><strong>Week 2: Master Phase Estimation</strong></em></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="PhaseEstimation.html"><span class="doc std std-doc">Phase Estimation</span></a> (<em>20 points</em> + <em>10 points for QFT below</em>)</p>
+<ul>
+<li><p><a class="reference internal" href="QFT.html"><span class="doc std std-doc">Quantum Fourier Transform</span></a> (<em>10 points</em>) (you will have to pause to build this during the phase-estimation section)</p></li>
+</ul>
+</li>
+</ul>
+<p><em><strong>Week 3: Shor’s Algorithm</strong></em></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="Shor-Classical.html"><span class="doc std std-doc">Classical Shor’s</span></a> (<em>10 points</em>)</p></li>
+<li><p><a class="reference internal" href="Shor-Quantum.html"><span class="doc std std-doc">A Unitary Matrix whose eigenvalues have the period of period-finding</span></a> (<em>10 points</em>)</p></li>
+<li><p><a class="reference internal" href="ModularMultiplication.html"><span class="doc std std-doc">Adding classical (and controlled-classical) gates to your simulator</span></a> (<em>10 points</em>)</p></li>
+<li><p><a class="reference internal" href="Shor-QuantumCircuit.html"><span class="doc std std-doc">Shor’s Algorithm</span></a> (<em>10 points</em>)</p></li>
+</ul>
+<p><strong>Extra Credit Options:</strong>
+There are various circuit subroutines you might want to build.</p>
+<p>One of these is to build a quantum circuit for an arbitrary classical circuit: <a class="reference internal" href="ClassicalGates.html"><span class="doc std std-doc">Classical Gates</span></a>  <strong>10 extra credit points</strong></p>
+<p>Another useful circuit primitive is to be able to generate <a class="reference internal" href="ControlledGates.html"><span class="doc std std-doc">Controlled Gates</span></a>.  <strong>5+5 extra credit points</strong></p>
+<p>Finally, you can explicitly show that BQP is in PSPACE: <a class="reference internal" href="BQPinPSPACE.html"><span class="doc std std-doc">BQP in PSPACE</span></a>.  This is not that hard and I think conceptually very interesting so it’s probably worth doing if you have some extra time.  <strong>20 extra credit points</strong>.</p>
+<p>I also have some <strong>extra credit</strong> options for Quantum Error Correction and Understanding Physical Qubits that I haven’t finished writing up. Let me know if either of these are of interest to you.</p>
+<!--
+
+
+
+- Work through the section on Dirac Notation [*(here)*](0-DiracNotation.html)
+- Build a quantum computing simulator (either I [*(here)*](1-UniversalComputer.html), II [*(here)*](1p-UniversalComputer.html), or III [*(here)*](1pp-UniversalComputer.html))
+       - If you have time, you should build them all because they are more efficient and you'll be able to factor bigger numbers.  Also, getting II or III  working will allow you to implement long-range controls without swaps.
+- Work through some circuits [*(here)*](2-Circuits.html) just to give you a sense for how we build up circuits.  If you're really pressed for time, you can skip them all
+    - If you have time, do all this page
+- Take the path through Universal Gates [*(here)*](3-Universality.html) that gets you a control-phase.
+    - If you have time, do all this page to understand how to take H, P, CNOT and build a circuit for any unitary matrix.
+- Build the scaffolding that does Shor's classically [*(here)*](4-ClassicalShors.html) and slowly and see that your quantum computer needs to quickly find the minimum  $r$ such that $x^r = 1 mod N$ for the correct $x$ and $N$
+- See that there exists a unitary matrix  $U_{x,N}$ whose eigenvalues are of the form $e^{2\pi i s/r}$ where $r$ is an integer [*(here)*](5-UnderstandShors.html).  *This section is necessary for understanding and debugging the next step but not actually part of your quantum computing Shor's simulation*
+- Now we need to make a quantum circuit which finds the phase of an eigenvalue of a unitary matrix. This is the phase estimation algorithm [*(here)*](6-PhaseEstimation.html).  In the process of doing this you will need to
+      - Learn how to build a quantum fourier transform [*(here)*](7-QuantumFourierTransform.html)  You can either do this first or when you get stuck on the point above (which will help motivate why you need it)
+           - Understand why the quantum fourier transform works [*(here)*](7p-UnderstandQuantumFourierTransform.html).  This can be skipped if you are low on time.
+- To use this for Shor's, we also need to do a control-XY mod N gate.  Go ahead and implement this. [*(here)*](8-ControlledClassical.html)
+-  Put it all together for Shor's algorithm [*(here)*](9-QuantumShors.html)
+
+-->
+</div>
+<hr class="docutils" />
+<div class="section" id="other-extensions">
+<h2>Other Extensions<a class="headerlink" href="#other-extensions" title="Permalink to this headline">#</a></h2>
+<p><em>None of these are written yet but with a little googling you could do them.</em></p>
+<ul class="simple">
+<li><p>Quantum Algorithms:</p>
+<ul>
+<li><p>Use your quantum simulator to simulate and learn about Grover’s Algorithm</p></li>
+<li><p>Use your quantum simulator to simulate Quantum Counting</p></li>
+<li><p>Use your quantum simulator to do time-evolutiomn of quantum systems and use phase estimation to find their ground states.</p>
+<ul>
+<li><p>Spins</p>
+<ul>
+<li><p>A single spin in a magnetic field</p></li>
+<li><p>Two spins in a magnetic field</p></li>
+<li><p>Two spins with a Heisenberg coupling between them</p></li>
+</ul>
+</li>
+<li><p>Hopping Electrons</p>
+<ul>
+<li><p>A tight binding model</p></li>
+<li><p>Add some interactions</p></li>
+</ul>
+</li>
+<li><p>Quantum Chemistry</p></li>
+<li><p>Hamiltonian Simulation:  There are a huge number of works on simulating Hamiltonians.</p>
+<ul>
+<li><p>Trotter breakup</p></li>
+<li><p>Graph Color Breakup</p></li>
+<li><p>Fractionalized excitations</p></li>
+</ul>
+</li>
+<li><p>Quantum Variational Approaches</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>How powerful are quantum computers?</p>
+<ul>
+<li><p>(Subsets of ) quantum computers are weak. Write a classical simulator which simulates</p>
+<ul>
+<li><p>Circuits which stay low in entanglement</p>
+<ul>
+<li><p>Circuits with no two-qubit gates</p></li>
+<li><p>Circuits with low entanglement</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(H^n\)</span> plus CNOT and phase gates and toffelli</p></li>
+<li><p>Stabilizer circuits</p></li>
+<li><p>Match Gates</p></li>
+</ul>
+</li>
+<li><p>Quantum computers are not too powerful (i.e. BQP in PSPACE)</p></li>
+</ul>
+</li>
+<li><p>Entanglement, Causality, and reduced density matrices</p></li>
+<li><p>Adiabatic Quantum Computing for optimization and state preparation</p></li>
+<li><p>Quantum Protocols:</p>
+<ul>
+<li><p>Quantum Key Distribution</p></li>
+<li><p>Teleportation</p></li>
+</ul>
+</li>
+<li><p>Quantum Error Correction</p></li>
+<li><p>Helpful Tools</p>
+<ul>
+<li><p>Visualization</p></li>
+<li><p>Manipulate dirac notation symbolically (this is useful for checking a bunch of the formulas we use)</p></li>
+</ul>
+</li>
+<li><p>Random Things:</p>
+<ul>
+<li><p>Deferred Measurement</p></li>
+<li><p>Zenos Paradox</p></li>
+</ul>
+</li>
+<li><p>Understand how we can actually build these gates physically from quantum systems</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./QC"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../CellularAutomata/OtherAutomata.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Other Interesting Automata</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="0-DiracNotation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Dirac Notation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Bryan Clark<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Non-atomic gates &#8212; Computing in Physics (Phy446)</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Phase estimation" href="PhaseEstimation.html" />
+    <link rel="prev" title="QC Simulator I(abcd)" href="1b-QuantumComputingSimulator.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Computing in Physics (Phy446)</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Setting up
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../GettingStarted.html">
+   Getting Setup
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Cellular Automata
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CellularAutomata/CellularAutomata.html">
+   Cellular Automata
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CellularAutomata/Sand.html">
+   Sand
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CellularAutomata/OtherAutomata.html">
+   Other Interesting Automata
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Quantum Computing
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="0-DiracNotation.html">
+   Dirac Notation
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="1a-QuantumComputingSimulator.html">
+   QC Simulator II
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1b-QuantumComputingSimulator.html">
+     QC Simulator I(abcd)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Non-atomic gates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="PhaseEstimation.html">
+   Phase estimation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="QFT.html">
+   Quantum Fourier Transform
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Shor-Overview.html">
+   Shor’s Algorithm
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Shor-Classical.html">
+     Shor’s Algorithm (classically)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Shor-Quantum.html">
+     Quantum Matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ModularMultiplication.html">
+     Modular Multiplication
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Shor-QuantumCircuit.html">
+     Shor’s Algorithm
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Quantum Computing (extensions)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Gates.html">
+   Gates
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ClassicalGates.html">
+     Classical Gates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ControlledGates.html">
+     Controlled Gates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Universal.html">
+     Gates for any Unitary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BQPinPSPACE.html">
+   BQP in PSPACE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Ising Model
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/IsingModel.html">
+   Simulating an Ising Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/Measure.html">
+   Measuring the Ising Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/RG.html">
+   The Renormalization Group
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/ParallelTempering.html">
+   Extra Credit: Parallel Tempering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/SimulatedAnnealing.html">
+   Extra Credit: Simulated Annealing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ML/Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ML/Hopfield.html">
+   Hopfield Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ML/RBM.html">
+   Restricted Boltzmann Machines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ML/Diffusion.html">
+   Generative Diffusion Models
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Topological Insulators
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/Lattice.html">
+   Lattices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/TightBinding.html">
+   Tight Binding Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/ChernInsulators.html">
+   Topological Insulators
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Non-atomic gates
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#not-gate">
+     Not Gate
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rz-gate">
+     Rz Gate
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#control-rz-gate">
+     Control-Rz Gate
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#control-phase-gate">
+     Control-Phase Gate
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#swap-gates">
+     Swap Gates
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#long-range-cnot">
+     Long-Range CNOT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-compiling">
+   Pre-compiling
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Non-atomic gates</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Non-atomic gates
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#not-gate">
+     Not Gate
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rz-gate">
+     Rz Gate
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#control-rz-gate">
+     Control-Rz Gate
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#control-phase-gate">
+     Control-Phase Gate
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#swap-gates">
+     Swap Gates
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#long-range-cnot">
+     Long-Range CNOT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-compiling">
+   Pre-compiling
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="non-atomic-gates">
+<h1>Non-atomic gates<a class="headerlink" href="#non-atomic-gates" title="Permalink to this headline">#</a></h1>
+<p>In order to build Shor’s algorithm, we need a (long-range) control-phase gates.  This is not part of our simulator, though.  Instead, we are going to build a control-phase out of our atomic gates (H, P, CNOT).  First let’s worry about building a nearest-neighbor phase-gate.</p>
+<div class="section" id="not-gate">
+<h2>Not Gate<a class="headerlink" href="#not-gate" title="Permalink to this headline">#</a></h2>
+<p>Build a gate out of H and P which takes</p>
+<div class="math notranslate nohighlight">
+\[
+|0\rangle \rightarrow |1 \rangle
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+|1\rangle \rightarrow |0 \rangle
+\]</div>
+<div class="caution admonition">
+<p class="admonition-title">Grading</p>
+<p>Into your document you should paste the circuit description for the <em>Not Gate</em> on a single wire.  It might look something like below (but it’s not this… in fact as a <em>hint</em> convince yourself that it is silly to have two Hadamards or two Phase gates in a row).</p>
+<p><strong>An (incorrect) example NOT gate</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INITSTATE</span> <span class="n">BASIS</span> <span class="o">|</span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="n">H</span> <span class="mi">0</span>
+<span class="n">P</span> <span class="mi">0</span> <span class="mf">0.3</span>
+<span class="n">H</span> <span class="mi">0</span>
+<span class="n">H</span> <span class="mi">0</span>
+<span class="n">P</span> <span class="mf">0.25</span>
+<span class="n">P</span> <span class="o">-</span><span class="mf">0.2</span>
+</pre></div>
+</div>
+<p>Also paste into your document the result of the run with the initial state being <span class="math notranslate nohighlight">\(|1\rangle\)</span>.</p>
+</div>
+</div>
+<div class="section" id="rz-gate">
+<h2>Rz Gate<a class="headerlink" href="#rz-gate" title="Permalink to this headline">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Z=
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; -1 \\
+\end{bmatrix}
+\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[R_z(\theta)=e^{-i \frac{\theta}{2} Z}\]</div>
+<p>Build a gate out of H and P which give you a <span class="math notranslate nohighlight">\(R_z\)</span> gate.  Think about how you would do it using NOT and P gates.</p>
+<div class="caution admonition">
+<p class="admonition-title">Grading</p>
+<p>Also, paste a description of that into your document.</p>
+</div>
+</div>
+<div class="section" id="control-rz-gate">
+<h2>Control-Rz Gate<a class="headerlink" href="#control-rz-gate" title="Permalink to this headline">#</a></h2>
+<p>Consider your Rz gate without the NOT in it.  What gate do you have then?</p>
+<p>Then figure out how to use this fact to build a control-Rz.  You should make this work for arbitrary distance between your control and Rz but
+can assume you have a long-range CNOT.</p>
+<div class="caution admonition">
+<p class="admonition-title">Grading</p>
+<p>Also, paste a description of that into your document.</p>
+</div>
+<p>Your description should look something like this:
+<strong>An (incorrect) example control-Rz gate</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INITSTATE</span> <span class="n">BASIS</span> <span class="o">|</span><span class="mi">10</span><span class="o">&gt;</span>
+<span class="n">H</span> <span class="mi">0</span>
+<span class="n">CNOT</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="n">P</span> <span class="mi">1</span> <span class="mf">0.3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="control-phase-gate">
+<h2>Control-Phase Gate<a class="headerlink" href="#control-phase-gate" title="Permalink to this headline">#</a></h2>
+<p>Your control-Rz and control-phase should differ by a global phase if the control bit is 1.  Figure out how to do modify your control - Rz to do this.</p>
+<div class="caution admonition">
+<p class="admonition-title">Grading</p>
+<p>Also, paste a description of that into your document.</p>
+</div>
+<p><strong>Congrats. You know have a working control-phase gate!</strong></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="swap-gates">
+<h2>Swap Gates<a class="headerlink" href="#swap-gates" title="Permalink to this headline">#</a></h2>
+<p>In addition to control-phase gates you will need a swap gate.  A swap gate allows you to take two wires and exchange them.  This means that if there are two wires that are far apart, you can make them closer.  It also means that if you wanted to reverse your wires you can do that (and you will need to!)</p>
+<p>In terms of Dirac notation, here’s an example of a swap gate:
+$<span class="math notranslate nohighlight">\(
+\textrm{Swap(12)}(\sqrt{0.3}|010\rangle + \sqrt{0.5}|001\rangle + \sqrt{0.2}|000\rangle = \sqrt{0.3}|001\rangle + \sqrt{0.5}|010\rangle + \sqrt{0.2}|000\rangle
+\)</span>$</p>
+<p>Figure out how to construct swap gates from H, P, and CNOT.</p>
+<div class="caution admonition">
+<p class="admonition-title">Grading</p>
+<p>Also, paste a description of SWAP(2,5) into your document</p>
+</div>
+</div>
+<div class="section" id="long-range-cnot">
+<h2>Long-Range CNOT<a class="headerlink" href="#long-range-cnot" title="Permalink to this headline">#</a></h2>
+<p>For the  CNOT gate you were required to make it work with just nearest-neighbor gates.  If you built a fancy enough simulator (II or III) you can easily implement the CNOT to work for non-nearest-neighbors.  If you haven’t built such a simulator figure out how to emulate this just using nearest neighbor CNOT and swap gates.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="tex2jax_ignore mathjax_ignore section" id="pre-compiling">
+<h1>Pre-compiling<a class="headerlink" href="#pre-compiling" title="Permalink to this headline">#</a></h1>
+<p>You’ve now figured out how to build a (long-range) control-phase and (long-range) CNOT out of elementary gates.  You’ve also figured out how to build SWAP out of elementary gates.  You could now take a circuit description like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span>
+<span class="n">H</span> <span class="mi">0</span>
+<span class="n">CPHASE</span> <span class="mi">0</span> <span class="mi">5</span> <span class="mf">0.3</span>
+<span class="n">P</span> <span class="mi">1</span> <span class="mf">0.3</span>
+<span class="n">CNOT</span> <span class="mi">4</span> <span class="mi">7</span>
+<span class="n">SWAP</span> <span class="mi">2</span> <span class="mi">8</span>
+</pre></div>
+</div>
+<p>and then write a python code that takes this circuit description and generates a new circuit description which uses only H and CNOT (and only short-range ones if your simulator does only short-range CNOT).  <em>Do not modify your quantum computing simulator to do these gates!  It should only eat H CNOT and P.</em></p>
+<div class="caution admonition">
+<p class="admonition-title">Grading</p>
+<p>Construct an input and run your precompiler on it. Convince yourself (and us) that this is the correct answer.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./QC"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="1b-QuantumComputingSimulator.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">QC Simulator I(abcd)</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="PhaseEstimation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Phase estimation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Bryan Clark<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

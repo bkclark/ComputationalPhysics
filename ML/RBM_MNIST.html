@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Training your RBM on MNIST &#8212; Computing in Physics (Phy446)</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Computing in Physics (Phy446)</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Setting up
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../GettingStarted.html">
+   Getting Setup
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Cellular Automata
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CellularAutomata/CellularAutomata.html">
+   Cellular Automata
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CellularAutomata/Sand.html">
+   Sand
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CellularAutomata/OtherAutomata.html">
+   Other Interesting Automata
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Quantum Computing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../QC/Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../QC/0-DiracNotation.html">
+   Dirac Notation
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../QC/1a-QuantumComputingSimulator.html">
+   QC Simulator II
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/1b-QuantumComputingSimulator.html">
+     QC Simulator I(abcd)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../QC/NonAtomicGates.html">
+   Non-atomic gates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../QC/PhaseEstimation.html">
+   Phase estimation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../QC/QFT.html">
+   Quantum Fourier Transform
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../QC/Shor-Overview.html">
+   Shor’s Algorithm
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/Shor-Classical.html">
+     Shor’s Algorithm (classically)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/Shor-Quantum.html">
+     Quantum Matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/ModularMultiplication.html">
+     Modular Multiplication
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/Shor-QuantumCircuit.html">
+     Shor’s Algorithm
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Quantum Computing (extensions)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../QC/Gates.html">
+   Gates
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/ClassicalGates.html">
+     Classical Gates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/ControlledGates.html">
+     Controlled Gates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/Universal.html">
+     Gates for any Unitary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../QC/BQPinPSPACE.html">
+   BQP in PSPACE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Ising Model
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/IsingModel.html">
+   Simulating an Ising Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/Measure.html">
+   Measuring the Ising Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/RG.html">
+   The Renormalization Group
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/ParallelTempering.html">
+   Extra Credit: Parallel Tempering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/SimulatedAnnealing.html">
+   Extra Credit: Simulated Annealing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Hopfield.html">
+   Hopfield Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="RBM.html">
+   Restricted Boltzmann Machines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Diffusion.html">
+   Generative Diffusion Models
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Topological Insulators
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/Lattice.html">
+   Lattices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/TightBinding.html">
+   Tight Binding Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/ChernInsulators.html">
+   Topological Insulators
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mnist-dataset">
+   MNIST Dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parameters">
+   Parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyze-your-results">
+   Analyze your results
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reconstruction">
+     Reconstruction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resampling">
+     Resampling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#weights">
+     Weights
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discrimination">
+     Discrimination
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Training your RBM on MNIST</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mnist-dataset">
+   MNIST Dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parameters">
+   Parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyze-your-results">
+   Analyze your results
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reconstruction">
+     Reconstruction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resampling">
+     Resampling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#weights">
+     Weights
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discrimination">
+     Discrimination
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="training-your-rbm-on-mnist">
+<h1>Training your RBM on MNIST<a class="headerlink" href="#training-your-rbm-on-mnist" title="Permalink to this headline">#</a></h1>
+<p>In this section we will use our RBM code to tackle a more realistic and difficult engineering task: learning hand-written digits. This is a very standard test in the machine learning community. A good reference for RBM training can be found <a class="reference external" href="https://www.cs.toronto.edu/~hinton/absps/guideTR.pdf">here</a>.</p>
+<p>After training, your RBM will have learned some general features of hand-written digits and be able to generate its own convincing drawings of numbers. In addition to being used as a generative model, a trained RBM can also be useful for anomaly detection, for example, checking if a particular image is likely to be from the data distribution or from another distribution. In our case, that means that <span class="math notranslate nohighlight">\(p(v_{digit}) \gg p(v_{letter})\)</span> for our RBM if <span class="math notranslate nohighlight">\(v_{digit}\)</span> is an image of a hand-written digit and <span class="math notranslate nohighlight">\(v_{letter}\)</span> is an image of a hand-written letter. RBMs can also be used as “feature-detectors” that supplement supervised learning methods in machine learning.</p>
+<div class="section" id="mnist-dataset">
+<h2>MNIST Dataset<a class="headerlink" href="#mnist-dataset" title="Permalink to this headline">#</a></h2>
+<p>The training data set that we will use to train our RBM is the MNIST database. The MNIST hand-written digit <a class="reference external" href="http://yann.lecun.com/exdb/mnist/">database</a> is a dataset of images and labels. Each image is a picture of a hand-written number between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(9\)</span>. The label indicates which of these numbers the image corresponds to. Since we are doing <em>unsupervised learning</em>, we will ignore the labels and only use the images of the digits themselves as our training data set for the RBM.</p>
+<p>The easiest way to get the data is to do the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.utils.data</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span>
+<span class="n">datasets</span><span class="o">.</span><span class="n">MNIST</span><span class="p">(</span><span class="s1">&#39;./data&#39;</span><span class="p">,</span>
+    <span class="n">train</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">download</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">transform</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">()])</span>
+     <span class="p">),</span>
+     <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span>
+<span class="p">)</span>
+<span class="n">myData</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">target</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">train_loader</span><span class="p">):</span>
+  <span class="n">myData</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">784</span><span class="p">))</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myData</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">myData</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">myData</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">myData</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Let’s get a little bit familiar with this data.</p>
+<p>Each row of myData is 784 numbers which can be reshaped into a 28x28 array which looks like the handwritten number.  For example, if we do</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pic</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">myData</span><span class="p">[</span><span class="mi">0</span><span class="p">,:])</span>
+<span class="n">pic</span><span class="o">=</span><span class="n">pic</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">28</span><span class="p">,</span><span class="mi">28</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">pic</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>should give you a picture of a written number.  We are regularly going to want to look at a whole grid of written numbers.</p>
+<div class="tip admonition">
+<p class="admonition-title">Grading</p>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">PlotMe(data)</span></code> which takes a <span class="math notranslate nohighlight">\(64 \times 784\)</span> array of numbers (i.e. <code class="docutils literal notranslate"><span class="pre">PlotMe(myData[0:64,:])</span></code> and makes an <span class="math notranslate nohighlight">\(8\times 8\)</span>  grid of numbers.   It should look something like</p>
+<p><img alt="NumberGrid" src="../_images/numberGrid.png" /></p>
+</div>
+<p>If you print out <code class="docutils literal notranslate"><span class="pre">myData</span></code> you will see that the data is a number between 0 and 1.  Because we are working with spins, we would like to convert each number to either be zero or one. To do this, every time you use the data as part of your RBM (i.e. to set the spins), convert the number <span class="math notranslate nohighlight">\(p\)</span> into 1 with probability <span class="math notranslate nohighlight">\(p\)</span> and 0 otherwise.</p>
+<p><strong>Your RBM for this part of the assignment needs to be using 1 and 0 as its spin values not 1 and -1. I have spent many hours tracking down the bug in my assignment where I was using 1 and -1</strong></p>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>eta=0.1</p></li>
+<li><p>M=64</p></li>
+<li><p>nv = 768</p></li>
+<li><p>nh = 10 (initially); you may eventually want to test nh=400</p></li>
+<li><p>Initialize the weights <span class="math notranslate nohighlight">\(W_{ij}\)</span> and the visible biases <span class="math notranslate nohighlight">\(a_i\)</span> with random numbers from a uniform distribution between <span class="math notranslate nohighlight">\(-0.01\)</span> and <span class="math notranslate nohighlight">\(0.01\)</span>. <strong>Initialize the hidden biases <span class="math notranslate nohighlight">\(b_j\)</span> to zero.</strong> (It seems that the training can get stuck in a bad local minimum if you initialize the hidden biases to be too large.)</p></li>
+</ul>
+<p>If you have set this up correctly, I find that if use <span class="math notranslate nohighlight">\(n_h=10\)</span> it should take 20 seconds per epoch (on google colab) and <span class="math notranslate nohighlight">\(n_h=400\)</span> should take 80 seconds per epoch.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="analyze-your-results">
+<h2>Analyze your results<a class="headerlink" href="#analyze-your-results" title="Permalink to this headline">#</a></h2>
+<p>We will now analyze our results.</p>
+<div class="section" id="reconstruction">
+<h3>Reconstruction<a class="headerlink" href="#reconstruction" title="Permalink to this headline">#</a></h3>
+<p>The simplest test to see what your RBM is do a reconstruction of the data.  In other words, once you have a paramaterized RBM go ahead and set the visible spins to be some data - i.e.  <code class="docutils literal notranslate"><span class="pre">visible=np.copy(myData[0:64,:])</span></code>.  Then use the function <code class="docutils literal notranslate"><span class="pre">PlotMe(visible)</span></code> above to plot these spins.  They will definitely look good because you’re just looking at the data.  Now, go ahead and do a single <code class="docutils literal notranslate"><span class="pre">SampleHidden</span></code> and <code class="docutils literal notranslate"><span class="pre">SampleVisible</span></code>.  This will change the visible spins completely based on the hidden spins (that were generated from the visible spins). Because the Markov chain hasn’t had a long time to walk away, you should see roughly the same letters but with some non-trivial noise.</p>
+<p>We can remove some of this noise by returning the probability of the visible spins (given the hidden spins) instead of just one sample.  This is actually equivalent to sampling the visible spins many different times over the same hidden spins and then averaging them.  Write a function <code class="docutils literal notranslate"><span class="pre">SampleVisibleProb</span></code> which returns not a sample of the visible spins but their probability distribution.  Make a grid of this data using <code class="docutils literal notranslate"><span class="pre">PlotMe(visible)</span></code> as well.  It should look much better.</p>
+<div class="tip admonition">
+<p class="admonition-title">Grading</p>
+<p>Paste these three plots into your document.</p>
+</div>
+<p>A place where reconstruction is potentially useful is in recalling a memory similar to what was done in the Hopfield network.   Take your RBM and drop half your visible spins.  Then see if you sample the hidden and visible spins if you get back the original value.</p>
+<div class="tip admonition">
+<p class="admonition-title">Grading</p>
+<p>Report on what you get under this approach.</p>
+</div>
+</div>
+<div class="section" id="resampling">
+<h3>Resampling<a class="headerlink" href="#resampling" title="Permalink to this headline">#</a></h3>
+<p>In practice, the RBM should not only be able to reconstruct the letters after one Gibbs sample but also a sample from the entire Markov chain should give you the same distribution of letters that you started with.   This requires a lot more training (and possible larger number of hidden spins).    You can test this by sampling back and forth a lot (~10000) of times.  An intermediate is to go back and forth about 100 times which lets you leave the current numbers further behind but still give you a sample of new numbers.  You again might want to average over all the hidden spins.  (<em>When I do this I get numbers but don’t get the distribution I started out with.  You should just report that you got some numbers but if you manage to pull off an optimization that gets the right distribution let me know how you did it</em>)</p>
+<div class="tip admonition">
+<p class="admonition-title">Grading</p>
+<p>Plot the resampled distribution that you get by running your Markov chain 1000 times.  You should report both the <code class="docutils literal notranslate"><span class="pre">SampleVisible</span></code> and <code class="docutils literal notranslate"><span class="pre">SampleVisibleProb</span></code> results for your very last sample (all others need to be <code class="docutils literal notranslate"><span class="pre">SampleVisible</span></code>).</p>
+</div>
+</div>
+<div class="section" id="weights">
+<h3>Weights<a class="headerlink" href="#weights" title="Permalink to this headline">#</a></h3>
+<p>Visualize the weights and biases. Since the visible spins <span class="math notranslate nohighlight">\(v_i\)</span> form a 2D image, they can be relabeled as if they were on a 2D square grid <span class="math notranslate nohighlight">\(v_i \rightarrow v_{(x,y)}\)</span>, where <span class="math notranslate nohighlight">\((x,y)\)</span> is a coordinate in the grid. Therefore, for a given hidden spin <span class="math notranslate nohighlight">\(h_j\)</span>, the weights connecting to the visible spins <span class="math notranslate nohighlight">\(W_{ij}\)</span> can be reshaped into a matrix <span class="math notranslate nohighlight">\(W_{ij} \rightarrow W^{j}_{(x,y)}\)</span>. These matrices can be visualized, say with <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.matshow</span></code> in python. Visually, these weight matrices represent the correlations the hidden spins have with the visible spins. In a trained RBM, the weight matrices should look like “features” that contain elements of handwritten digits, such as straight and curved strokes. If your weights all look noisy or identical for all <span class="math notranslate nohighlight">\(j\)</span>, then probably the training is not working correctly.   My weights looked much better when I plotted them in grayscale <code class="docutils literal notranslate"><span class="pre">plt.imshow(M,cmap=plt.cm.binary)</span></code></p>
+<div class="tip admonition">
+<p class="admonition-title">Grading</p>
+<p>Paste a visualization of your weights into your document.</p>
+</div>
+</div>
+<div class="section" id="discrimination">
+<h3>Discrimination<a class="headerlink" href="#discrimination" title="Permalink to this headline">#</a></h3>
+<p>One thing an RBM is good at is distinguishing between the thing it was trained on (a written digit) versus something else (say random noise). You can ask your RBM for the relative probability of these things by computing the free energy of two different images and see what is more likely.</p>
+<div class="tip admonition">
+<p class="admonition-title">Grading</p>
+<p>Report your free energy for these two examples.</p>
+</div>
+<hr class="docutils" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ML"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Bryan Clark<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

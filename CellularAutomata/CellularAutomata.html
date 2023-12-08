@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cellular Automata &#8212; Computing in Physics (Phy446)</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sand" href="Sand.html" />
+    <link rel="prev" title="Getting Setup" href="../GettingStarted.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Computing in Physics (Phy446)</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Setting up
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../GettingStarted.html">
+   Getting Setup
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Cellular Automata
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Cellular Automata
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Sand.html">
+   Sand
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OtherAutomata.html">
+   Other Interesting Automata
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Quantum Computing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../QC/Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../QC/0-DiracNotation.html">
+   Dirac Notation
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../QC/1a-QuantumComputingSimulator.html">
+   QC Simulator II
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/1b-QuantumComputingSimulator.html">
+     QC Simulator I(abcd)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../QC/NonAtomicGates.html">
+   Non-atomic gates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../QC/PhaseEstimation.html">
+   Phase estimation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../QC/QFT.html">
+   Quantum Fourier Transform
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../QC/Shor-Overview.html">
+   Shor’s Algorithm
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/Shor-Classical.html">
+     Shor’s Algorithm (classically)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/Shor-Quantum.html">
+     Quantum Matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/ModularMultiplication.html">
+     Modular Multiplication
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/Shor-QuantumCircuit.html">
+     Shor’s Algorithm
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Quantum Computing (extensions)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../QC/Gates.html">
+   Gates
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/ClassicalGates.html">
+     Classical Gates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/ControlledGates.html">
+     Controlled Gates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QC/Universal.html">
+     Gates for any Unitary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../QC/BQPinPSPACE.html">
+   BQP in PSPACE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Ising Model
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/IsingModel.html">
+   Simulating an Ising Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/Measure.html">
+   Measuring the Ising Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/RG.html">
+   The Renormalization Group
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/ParallelTempering.html">
+   Extra Credit: Parallel Tempering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ising/SimulatedAnnealing.html">
+   Extra Credit: Simulated Annealing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ML/Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ML/Hopfield.html">
+   Hopfield Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ML/RBM.html">
+   Restricted Boltzmann Machines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ML/Diffusion.html">
+   Generative Diffusion Models
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Topological Insulators
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/Lattice.html">
+   Lattices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/TightBinding.html">
+   Tight Binding Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TI/ChernInsulators.html">
+   Topological Insulators
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Cellular Automata
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lattice-gas-automata">
+   Lattice Gas Automata
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entropy">
+     Entropy
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Cellular Automata</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Cellular Automata
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lattice-gas-automata">
+   Lattice Gas Automata
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entropy">
+     Entropy
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="cellular-automata">
+<h1>Cellular Automata<a class="headerlink" href="#cellular-automata" title="Permalink to this headline">#</a></h1>
+<p>This is just a warmup exercise to  make sure you can write some code, compile, run, and submit things.</p>
+<p><strong>Template for Solution:</strong> <a class="reference external" href="https://docs.google.com/document/d/1XfuSZoOJqSgL_hP7vCQFfOfQAJBNMqMz6Bc9wS3Nxm8/edit?usp=sharing">https://docs.google.com/document/d/1XfuSZoOJqSgL_hP7vCQFfOfQAJBNMqMz6Bc9wS3Nxm8/edit?usp=sharing</a></p>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Wikipedia article on <a class="reference external" href="https://en.wikipedia.org/wiki/Cellular_automaton">cellular automata</a>.</p></li>
+<li><p>Wikipedia article on a famous example of a cellular automaton, <a class="reference external" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway’s game of life</a>.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="id1">
+<h2>Cellular Automata<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>In physics, you have a <em>state</em> of the universe and you have some <em>rules to update</em> the state. In classical physics, the rules are always local (even in E&amp;M, you can write things in terms of local fields).</p>
+<p>If your goal is to write down a model which captures these simple principles, cellular automata are the simplest way to do this.  In cellular automata you have a bunch of grid points (say on a square or a honeycomb) and you have some local rules to update these cells.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="lattice-gas-automata">
+<h2>Lattice Gas Automata<a class="headerlink" href="#lattice-gas-automata" title="Permalink to this headline">#</a></h2>
+<p>In a lattice gas automata, you have two colors (black and white).  You can treat the black color as the gas and the white color as empty space.</p>
+<p>Our <em>state</em>, then, is going to be where the gas and empty space is.</p>
+<p>We will start with the right half of the system filled with gas and the left half empty (i.e. the right half is black and the left half is white).</p>
+<p>The <em>rule</em> then is:</p>
+<ul class="simple">
+<li><p>randomly select a site.</p></li>
+<li><p>randomly select a neighbor.</p></li>
+<li><p>swap the site and the neighbor (even if they are the same color).</p></li>
+</ul>
+<p>Even if you swap a white site with another white site you should count it as a time step.</p>
+<p>You should use open boundary conditions (i.e. the top and the bottom don’t wrap).  You have to be a bit careful about the boundaries. You don’t want to access memory not in your array.</p>
+<p>Write a Python code that does this and prints out snapshots configurations every so often.  Work on a 100 x 100 lattice.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="a5540344-3d22-4537-ac8c-97f64393afed" name="81cb09a6-729e-4167-be9e-69a340d389fe" type="radio">
+</input><label class="sd-tab-label" for="a5540344-3d22-4537-ac8c-97f64393afed">
+Python</label><div class="sd-tab-content docutils">
+<p><strong>Storing your state</strong></p>
+<p>To store your state a good option is <code class="docutils literal notranslate"><span class="pre">state=numpy.zeros((100,100))</span></code></p>
+<p>which you can then intialize like <code class="docutils literal notranslate"><span class="pre">state[0:100,0:100]=0</span></code></p>
+<p>which you can then access like <code class="docutils literal notranslate"><span class="pre">state[i][j]</span></code></p>
+<p><strong>Random Numbers</strong></p>
+<p>For random numbers you can use <code class="docutils literal notranslate"><span class="pre">numpy.random</span></code></p>
+</div>
+<input id="52a00d31-24c9-4a67-a4f3-342b3a3fd365" name="81cb09a6-729e-4167-be9e-69a340d389fe" type="radio">
+</input><label class="sd-tab-label" for="52a00d31-24c9-4a67-a4f3-342b3a3fd365">
+C++</label><div class="sd-tab-content docutils">
+<p><strong>Storing your state</strong></p>
+<p>To store your state a good option is
+<code class="docutils literal notranslate"><span class="pre">vector&lt;vector&lt;int</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span> <span class="pre">state;</span></code></p>
+<p>which you can then intialize like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">state</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">state</span><span class="o">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+   <span class="n">state</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="o">//</span> <span class="n">This</span> <span class="n">below</span> <span class="n">sets</span> <span class="n">it</span> <span class="nb">all</span> <span class="n">to</span> <span class="n">zero</span><span class="o">.</span>
+<span class="o">//</span> <span class="n">You</span> <span class="n">might</span> <span class="n">want</span> <span class="n">to</span> <span class="n">do</span> <span class="n">something</span> <span class="n">fancier</span>
+<span class="o">//</span> <span class="n">to</span> <span class="n">initialize</span> <span class="n">half</span> <span class="n">black</span> <span class="ow">and</span> <span class="n">half</span> <span class="n">white</span><span class="o">.</span>
+   <span class="n">std</span><span class="p">::</span><span class="n">fill</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">state</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">end</span><span class="p">(),</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>which you can then access like <code class="docutils literal notranslate"><span class="pre">state[i][j]</span></code>;</p>
+<p><strong>Random Numbers</strong></p>
+<p>For random numbers you want to use the C++11 random numbers.  Take a look at this <a class="reference external" href="https://stackoverflow.com/questions/19665818/generate-random-numbers-using-c11-random-library">stack exchange article</a>. Concerning that article, the general rule is:</p>
+<p>Call these once per program</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="p">::</span><span class="n">random_device</span> <span class="n">rd</span><span class="p">;</span>
+<span class="n">std</span><span class="p">::</span><span class="n">mt19937</span> <span class="n">mt</span><span class="p">(</span><span class="n">rd</span><span class="p">());</span>
+</pre></div>
+</div>
+<p>Call this once or many times (it’s cheap and doesn’t reset the randomness):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="p">::</span><span class="n">uniform_int_distribution</span> <span class="n">dist</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>and then use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dist</span><span class="p">(</span><span class="n">mt</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>to actually get the random numbers.</p>
+</div>
+</div>
+<div class="section" id="entropy">
+<h3>Entropy<a class="headerlink" href="#entropy" title="Permalink to this headline">#</a></h3>
+<p>Entropy is essentially a measure of how “random” a state is. The more random a state, the more entropy it should have.  A state where the “gas” is randomly placed is going to have the highest entropy.
+There are various ways then of measuring  entropy.  One approach is to take a configuration and ask how easy it is to compress it.  If it compresses efficiently then it has low entropy.  If it’s completely “random”
+then it’s hard to compress and has high entropy.  After you’ve produced configurations (in memory or as a file), go ahead and load the configuration using python, compress the state, and measure its size as a function of time.  This will be our heurestic for the entropy of the state (if a state is very disordered, it should be hard to describe compactly). You can use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gzip</span>
+<span class="n">gzip</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">a</span></code> is a long string.  Alternatively, you can convert your matrix to bytes (i.e. <code class="docutils literal notranslate"><span class="pre">x.tobytes()</span></code> where <code class="docutils literal notranslate"><span class="pre">x</span></code> is an array) and do <code class="docutils literal notranslate"><span class="pre">gzip.compress(x.tobytes())</span></code></p>
+<p>Run your automata long enough to see it equilbrate.  Graph as a function of sweeps (where each sweep is 100 x 100 steps).</p>
+<div class="caution admonition">
+<p class="admonition-title">Grading</p>
+<p>The graded aspect of this assignment is to submit a graph with file-size as a function of sweep as well as a series of snapshots every 500 sweeps (including sweep 0).  Place these graphs into your document and submit both your document and your code.</p>
+<p>The one graph should look like this:</p>
+<p><img alt="equilibrate" src="../_images/equilibrate.png" /></p>
+<p>To produce this graph I’m using <code class="docutils literal notranslate"><span class="pre">pylab.</span></code> <em>Please make sure you label your axes.</em>  To produce the snapshots you probably want to use something like <code class="docutils literal notranslate"><span class="pre">pylab.matshow(myArray)</span></code>.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./CellularAutomata"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../GettingStarted.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Getting Setup</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Sand.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Sand</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Bryan Clark<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
