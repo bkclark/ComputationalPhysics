@@ -1,44 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restricted Boltzmann Machines &#8212; Computing in Physics (Phy446)</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>Restricted Boltzmann Machines &#8212; Computing in Physics (Phy446)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -48,511 +64,293 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ML/RBM';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Generative Diffusion Models" href="Diffusion.html" />
     <link rel="prev" title="Hopfield Networks" href="Hopfield.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Computing in Physics (Phy446)</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Setting up
- </span>
-</p>
+  
+
+<a class="navbar-brand logo" href="../Overview.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computing in Physics (Phy446)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setting up</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../GettingStarted.html">
-   Getting Setup
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted.html">Getting Setup</a></li>
+
+
+
+
+
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Cellular Automata
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cellular Automata</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/CellularAutomata.html">
-   Cellular Automata
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/Sand.html">
-   Sand
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/OtherAutomata.html">
-   Other Interesting Automata
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/CellularAutomata.html">Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/Sand.html">Sand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/OtherAutomata.html">Other Interesting Automata</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Quantum Computing
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Computing</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/0-DiracNotation.html">
-   Dirac Notation
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../QC/1a-QuantumComputingSimulator.html">
-   QC Simulator II
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/1b-QuantumComputingSimulator.html">
-     QC Simulator I(abcd)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/NonAtomicGates.html">
-   Non-atomic gates
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/PhaseEstimation.html">
-   Phase estimation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/QFT.html">
-   Quantum Fourier Transform
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../QC/Shor-Overview.html">
-   Shor’s Algorithm
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/Shor-Classical.html">
-     Shor’s Algorithm (classically)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/Shor-Quantum.html">
-     Quantum Matrix
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/ModularMultiplication.html">
-     Modular Multiplication
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/Shor-QuantumCircuit.html">
-     Shor’s Algorithm
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/0-DiracNotation.html">Dirac Notation</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QC/1a-QuantumComputingSimulator.html">QC Simulators</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QC/SimulatorS.html">Simulator S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/1b-QuantumComputingSimulator.html">Simulator M-(abcd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Measuring.html">Measuring and Input</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Quantum Computing (extensions)
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/NonAtomicGates.html">Non-atomic gates</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../QC/PhaseEstimation.html">Phase estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/QFT.html">Quantum Fourier Transform</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QC/Shor-Overview.html">Shor’s Algorithm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Shor-Classical.html">Shor’s Algorithm (classically)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Shor-Quantum.html">Quantum Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/ModularMultiplication.html">Modular Multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Shor-QuantumCircuit.html">Shor’s Algorithm</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Computing (extensions)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../QC/Gates.html">
-   Gates
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/ClassicalGates.html">
-     Classical Gates
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/ControlledGates.html">
-     Controlled Gates
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/Universal.html">
-     Gates for any Unitary
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/BQPinPSPACE.html">
-   BQP in PSPACE
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QC/Gates.html">Gates</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QC/ClassicalGates.html">Classical Gates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/ControlledGates.html">Controlled Gates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Universal.html">Gates for any Unitary</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ising Model
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/BQPinPSPACE.html">BQP in PSPACE</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ising Model</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/IsingModel.html">
-   Simulating an Ising Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/Measure.html">
-   Measuring the Ising Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/RG.html">
-   The Renormalization Group
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/ParallelTempering.html">
-   Extra Credit: Parallel Tempering
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/SimulatedAnnealing.html">
-   Extra Credit: Simulated Annealing
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/IsingModel.html">Simulating an Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/Measure.html">Measuring the Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/RG.html">The Renormalization Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/ParallelTempering.html">Extra Credit: Parallel Tempering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/SimulatedAnnealing.html">Extra Credit: Simulated Annealing</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Machine Learning
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Hopfield.html">
-   Hopfield Networks
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Restricted Boltzmann Machines
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Diffusion.html">
-   Generative Diffusion Models
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hopfield.html">Hopfield Networks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Restricted Boltzmann Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Diffusion.html">Generative Diffusion Models</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Topological Insulators
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topological Insulators</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/Lattice.html">
-   Lattices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/TightBinding.html">
-   Tight Binding Models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/ChernInsulators.html">
-   Topological Insulators
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/Lattice.html">Lattices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/TightBinding.html">Tight Binding Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/ChernInsulators.html">Topological Insulators</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
 
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rbm-as-an-ising-model">
-   RBM as an Ising Model
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#understanding-probability-distributions">
-   Understanding Probability Distributions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#building-and-sampling-an-rbm">
-   Building and Sampling an RBM
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#unsupervised-learning-and-training-an-rbm">
-   Unsupervised Learning and Training an RBM
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#computing-gradients">
-     Computing Gradients
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#putting-it-together-and-mini-batches">
-     Putting it together (and mini-batches)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#testing">
-     Testing
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#free-energy">
-     Free Energy
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#applications-of-rbm">
-   Applications of RBM
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Restricted Boltzmann Machines</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rbm-as-an-ising-model">
-   RBM as an Ising Model
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#understanding-probability-distributions">
-   Understanding Probability Distributions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#building-and-sampling-an-rbm">
-   Building and Sampling an RBM
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#unsupervised-learning-and-training-an-rbm">
-   Unsupervised Learning and Training an RBM
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#computing-gradients">
-     Computing Gradients
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#putting-it-together-and-mini-batches">
-     Putting it together (and mini-batches)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#testing">
-     Testing
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#free-energy">
-     Free Energy
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#applications-of-rbm">
-   Applications of RBM
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Restricted Boltzmann Machines</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rbm-as-an-ising-model">RBM as an Ising Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-probability-distributions">Understanding Probability Distributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-and-sampling-an-rbm">Building and Sampling an RBM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unsupervised-learning-and-training-an-rbm">Unsupervised Learning and Training an RBM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-gradients">Computing Gradients</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#putting-it-together-and-mini-batches">Putting it together (and mini-batches)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy">Free Energy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-rbm">Applications of RBM</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="restricted-boltzmann-machines">
-<h1>Restricted Boltzmann Machines<a class="headerlink" href="#restricted-boltzmann-machines" title="Permalink to this headline">#</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="restricted-boltzmann-machines">
+<h1>Restricted Boltzmann Machines<a class="headerlink" href="#restricted-boltzmann-machines" title="Permalink to this heading">#</a></h1>
 <p>In this section, we will learn how to build and train a restricted Boltzmann machine (RBM) to solve a simple engineering task.</p>
 <p>The restricted Boltzmann machine is an example of a physics-inspired method that is useful for engineering problems. At a high-level, RBMs are probability distributions for binary data with many tunable parameters. When “training” an RBM, we tune its parameters to make the RBM’s probability distribution match the distribution of a training data set. Our goal in this unit is to make and train an RBM whose probability distribution matches the distribution of images in the MNIST handwritten digit data set.</p>
 <p>Like a Hopfield network, a restricted Boltzmann machine is a particular type of Ising model. We saw that a Hopfield network can be thought of as a zero-temperature Ising model which equilibrates to a local energy minimum. Similarly, a restricted Boltzmann machine can be thought of as a finite-temperature Ising model with a particular connection structure between its spins. Because of their relation to statistical physics, RBMs are more interpretable than some other machine learning approaches. And because of their particular structure, they can be efficiently trained.</p>
@@ -571,8 +369,8 @@ E(v,h)=-\sum_{ij} v_i W_{ij} h_j - \sum_i a_i v_i - \sum_j b_j h_j
 <p>is the energy of the visible and hidden spins, <span class="math notranslate nohighlight">\(Z\)</span> is a normalization constant, and the temperature is set to <span class="math notranslate nohighlight">\(T=1\)</span>. Each entry of the weight matrix <span class="math notranslate nohighlight">\(W_{ij}\)</span> describes an interaction between a visible spin <span class="math notranslate nohighlight">\(v_i\)</span> and a hidden spin <span class="math notranslate nohighlight">\(h_j\)</span>. The visible bias <span class="math notranslate nohighlight">\(a_i\)</span> (hidden bias <span class="math notranslate nohighlight">\(b_j\)</span>) is a magnetic field that encourages the visible spin <span class="math notranslate nohighlight">\(v_i\)</span> (hidden spin <span class="math notranslate nohighlight">\(h_j\)</span>) to turn on. Note that the energy <span class="math notranslate nohighlight">\(E(v,h)\)</span>, and therefore the probability <span class="math notranslate nohighlight">\(p(v,h)\)</span>, depends on the weights <span class="math notranslate nohighlight">\(W_{ij}\)</span> and biases <span class="math notranslate nohighlight">\(a_i, b_j\)</span>. These parameters define the RBM and are what we will tune during training.</p>
 <p>Our goal is to write an RBM code and make it “learn” a probability distribution from a training data set. Once trained on this data, the machine will be able to produce new samples from the data’s distribution (or its best estimate).</p>
 <hr class="docutils" />
-<div class="section" id="rbm-as-an-ising-model">
-<h2>RBM as an Ising Model<a class="headerlink" href="#rbm-as-an-ising-model" title="Permalink to this headline">#</a></h2>
+<section id="rbm-as-an-ising-model">
+<h2>RBM as an Ising Model<a class="headerlink" href="#rbm-as-an-ising-model" title="Permalink to this heading">#</a></h2>
 <p>To summarize, an RBM is really just an Ising model.</p>
 <p>Restricted Boltzmann Machine <span class="math notranslate nohighlight">\(\longleftrightarrow\)</span> Ising Model</p>
 <ul class="simple">
@@ -594,10 +392,10 @@ E(v,h)=-\sum_{ij} v_i W_{ij} h_j - \sum_i a_i v_i - \sum_j b_j h_j
 p(v,h) = \frac{1}{Z}\exp(-E(v,h)).
 \]</div>
 <p>There are <span class="math notranslate nohighlight">\(N_v\)</span> visible spins <span class="math notranslate nohighlight">\(v_1,\ldots,v_{N_v}\)</span> and <span class="math notranslate nohighlight">\(N_h\)</span> hidden spins <span class="math notranslate nohighlight">\(h_1,\ldots,h_{N_h}\)</span>.</p>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="understanding-probability-distributions">
-<h2>Understanding Probability Distributions<a class="headerlink" href="#understanding-probability-distributions" title="Permalink to this headline">#</a></h2>
+<section id="understanding-probability-distributions">
+<h2>Understanding Probability Distributions<a class="headerlink" href="#understanding-probability-distributions" title="Permalink to this heading">#</a></h2>
 <p>There are a number of probability distributions that we need to be familiar with to understand RBMs. These probabilities characterize the frequency with which we observe configurations of visible and hidden spins when sampling an RBM.</p>
 <p>The first and most important is the <strong>joint probability</strong> <span class="math notranslate nohighlight">\(p(v,h)\)</span>. This is a probability distribution over multiple random variables that gives the probability of observing these variables simultaneously. In other words, it tells us probability that the visible spins are in configuration <span class="math notranslate nohighlight">\(v\)</span> <em>and</em> the hidden spins are in configuration <span class="math notranslate nohighlight">\(h\)</span>. By definition, for an RBM, this is given by the Boltzmann distribution</p>
 <div class="math notranslate nohighlight">
@@ -650,20 +448,20 @@ p(A|B) p(B) = p(B|A) p(A),
 <p>The variables in an RBM are by design split into two groups, visible and hidden variables. When training an RBM, the visible variables are associated with data, such as the pixels in images, while the hidden variables are simply extra variables in the model, sometimes called auxiliary or latent variables. Because of the special interpretation of the visible variables, it is natural to consider the probability of just the visible spins, i.e., the marginal distribution <span class="math notranslate nohighlight">\(p(v)\)</span>. This marginal distribution is the probability distribution that we will want to match to a data set during training. This is why we care about marginal probabilities.</p>
 <p>An important technical detail about RBMs is that, because of the bipartite structure of the RBM, there is an efficient way to sample spin configurations using conditional probabilities <span class="math notranslate nohighlight">\(p(v|h)\)</span> and <span class="math notranslate nohighlight">\(p(h|v)\)</span>. This efficient sampling allows us to perform efficient training. This is why we care about conditional probabilities.</p>
 <p>In the Ising model unit, there was only one type of spin and there was no reason to split the spins into different subsystems. So we never needed to consider probability distributions that related different subsystems.</p>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="building-and-sampling-an-rbm">
-<h2>Building and Sampling an RBM<a class="headerlink" href="#building-and-sampling-an-rbm" title="Permalink to this headline">#</a></h2>
+<section id="building-and-sampling-an-rbm">
+<h2>Building and Sampling an RBM<a class="headerlink" href="#building-and-sampling-an-rbm" title="Permalink to this heading">#</a></h2>
 <p>Your first goal is to set up the basic code structure for your RBM. You will want to store the states of your visible and hidden variables, as well as the values of your parameters, the weight matrix and the biases. Note that the weight matrix is generally rectangular, as there may be different numbers of visible <span class="math notranslate nohighlight">\(N_v\)</span> and hidden neurons <span class="math notranslate nohighlight">\(N_h\)</span>. You should also set up a function that computes the energy, which will be useful for debugging.</p>
 <p>Next, we want to learn how to sample configurations from our RBM, given the weights and biases, which we will need later in our training. Our goal is to produce spin configurations <span class="math notranslate nohighlight">\((v,h)\)</span> with probability <span class="math notranslate nohighlight">\(p(v,h)\)</span>. Since the RBM is just an Ising model, one way we could perform this sampling is by using Metropolis Markov Chain Monte Carlo as we did in the Ising model unit, where we performed single spin flips randomly by using the energy function. It turns out there is a more efficient sampling method for RBMs, because of their special restricted structure, that allows us to “flip” many spins at once instead of one-at-a-time.</p>
 <p>The efficient Monte Carlo method that we will use to sample the joint distribution <span class="math notranslate nohighlight">\(p(v,h)\)</span> is known as <strong>Gibbs sampling</strong>. Gibbs sampling involves the following steps:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Given the current visible layer <span class="math notranslate nohighlight">\(v\)</span>, probabilistically choose a configuration for the hidden layer <span class="math notranslate nohighlight">\(h\)</span>.</p></li>
 <li><p>Given the chosen <span class="math notranslate nohighlight">\(h\)</span>, probabilistically choose a configuration for <span class="math notranslate nohighlight">\(v\)</span>.</p></li>
 <li><p>Repeat steps 1 and 2 <span class="math notranslate nohighlight">\(k\)</span>-times.</p></li>
 </ol>
 <p>This process is a Markov chain, and therefore has a stationary distribution. To produce the desired distribution, we must probabilistically choose new configurations of the hidden or visible layers in such a way that the stationary distribution is proportional to <span class="math notranslate nohighlight">\(p(v,h) \propto \exp[-E(v,h)]\)</span>. This can be done by using conditional probabilities in each step of the sampling process. Specifically, the first two steps are:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Given <span class="math notranslate nohighlight">\(v\)</span>, choose a new <span class="math notranslate nohighlight">\(h\)</span> with probability <span class="math notranslate nohighlight">\(p(h|v)\)</span>.</p></li>
 <li><p>Given <span class="math notranslate nohighlight">\(h\)</span>, choose a new <span class="math notranslate nohighlight">\(v\)</span> with probability <span class="math notranslate nohighlight">\(p(v|h)\)</span>.</p></li>
 </ol>
@@ -738,9 +536,9 @@ For a small <span class="math notranslate nohighlight">\(N_h=2\)</span>, <span c
 using Gibbs sampling <strong>and</strong> by brute-force calculation using the explicit formulas for these probabilities that we gave above.
 Make sure that the approximate RBM probabilities and the exact brute-force probabilities agree within 0.01.</p>
 </div>
-</div>
-<div class="section" id="unsupervised-learning-and-training-an-rbm">
-<h2>Unsupervised Learning and Training an RBM<a class="headerlink" href="#unsupervised-learning-and-training-an-rbm" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="unsupervised-learning-and-training-an-rbm">
+<h2>Unsupervised Learning and Training an RBM<a class="headerlink" href="#unsupervised-learning-and-training-an-rbm" title="Permalink to this heading">#</a></h2>
 <p>The task that restricted Boltzmann machines are typically used for is <strong>unsupervised learning</strong>. The goal of unsupervised learning is to train a machine to learn the probability distribution underlying a data set. To accomplish this goal, the machine is trained on <em>unlabeled</em> data, such as raw images without any captions or identifying information. By training on a large enough data set of high quality samples, the machine will hopefully be able to learn the correlations in the data set. Ultimately, we would like the machine to be able to generalize from the data it has seen. A well-trained unsupervised learning model should be able to generate new data samples that have the same features as the original training data. For this reason, such models are often called <em>generative models</em>.</p>
 <p>Your next big step is to train your RBM to learn a probability distribution, called the <strong>data distribution</strong>, from a data set of samples of the distribution, called the <strong>training data</strong>. During training, the RBM’s parameters, the weights <span class="math notranslate nohighlight">\(W_{ij}\)</span> and biases <span class="math notranslate nohighlight">\(a_i,b_j\)</span>, are tuned so that the marginal distribution of the visible spins <span class="math notranslate nohighlight">\(p(v)\)</span> matches the data distribution represented by the training data set. After successful training, sampling the visible layer of your RBM should (ideally) produces new samples that are also from the same underlying distribution of the training data.</p>
 <p>In general it might be hard to exactly reproduce the data distribution, so instead we aim to get a probability distribution that is “close.” Let us define a measure of the “close-ness” of two distributions <span class="math notranslate nohighlight">\(p(v)\)</span> and <span class="math notranslate nohighlight">\(q(v)\)</span> as</p>
@@ -760,8 +558,8 @@ b_{j} &amp;\rightarrow b_{j} - \eta \frac{\partial O}{\partial b_{j}}
 \end{align*}
 \end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\eta\)</span> is an arbitrary parameter called the <strong>learning rate</strong>, or step size. The learning rate parameter affects the convergence of gradient descent and is generally chosen through trial and error.</p>
-<div class="section" id="computing-gradients">
-<h3>Computing Gradients<a class="headerlink" href="#computing-gradients" title="Permalink to this headline">#</a></h3>
+<section id="computing-gradients">
+<h3>Computing Gradients<a class="headerlink" href="#computing-gradients" title="Permalink to this heading">#</a></h3>
 <p>To perform gradient descent, we need to evaluate the gradients of the objective function <span class="math notranslate nohighlight">\(O\)</span> with respect to the parameters. For our particular objective function, the relative entropy between the data distribution and the RBM marginal <span class="math notranslate nohighlight">\(p(v)\)</span> distribution, the gradients turn out to have the following form</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -771,7 +569,7 @@ b_{j} &amp;\rightarrow b_{j} - \eta \frac{\partial O}{\partial b_{j}}
 \frac{\partial O}{\partial b_{j}} &amp;= \langle h_j\rangle_{\textrm{RBM}} - \langle h_j\rangle_{\textrm{RBM}|\textrm{data}} \\
 \end{align*}
 \end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\langle f(v,h) \rangle_{\textrm{RBM}|\textrm{data}} = \sum_{v,h} f(v,h) p(h|v) q(v)\)</span> represents an average of the function <span class="math notranslate nohighlight">\(f\)</span> over the RBM, given that the visible variables are distributed according to the training data distribution <span class="math notranslate nohighlight">\(q(v)\)</span>; and <span class="math notranslate nohighlight">\(\langle f(v,h) \rangle_{\textrm{RBM}} = \sum_{v,h} f(v,h) p(v,h)\)</span> represents an average over the RBM’s joint distribution <span class="math notranslate nohighlight">\(p(v,h)\)</span> without any conditioning on the visible variables.  See <span class="xref myst">here</span> for notes deriving these derivatives.</p>
+<p>where <span class="math notranslate nohighlight">\(\langle f(v,h) \rangle_{\textrm{RBM}|\textrm{data}} = \sum_{v,h} f(v,h) p(h|v) q(v)\)</span> represents an average of the function <span class="math notranslate nohighlight">\(f\)</span> over the RBM, given that the visible variables are distributed according to the training data distribution <span class="math notranslate nohighlight">\(q(v)\)</span>; and <span class="math notranslate nohighlight">\(\langle f(v,h) \rangle_{\textrm{RBM}} = \sum_{v,h} f(v,h) p(v,h)\)</span> represents an average over the RBM’s joint distribution <span class="math notranslate nohighlight">\(p(v,h)\)</span> without any conditioning on the visible variables.  See <a class="reference download internal" download="" href="../_downloads/3be0cdfbf651e5e4144598baacda35e2/RBMTraining.pdf"><span class="xref download myst">here</span></a> for notes deriving these derivatives.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">More accurate derivatives</p>
 <p>You can improve this derivative slightly by instead of evaluating terms like
@@ -780,9 +578,9 @@ by averaging over many samples of <span class="math notranslate nohighlight">\(h
 <p>(We could have alternatively come to this conclusion by thinking of the derivatives as being made up of terms like <span class="math notranslate nohighlight">\(q(v) \frac{\partial F(v)}{\partial W_{ij}}\)</span> where <span class="math notranslate nohighlight">\(F(v)\)</span> is the free-energy.)</p>
 <p>You are free to make this change in your code (or not).  You can do this by adding a <code class="docutils literal notranslate"><span class="pre">SampleHiddenProb</span></code> which returns the probabilities of the hidden spins and not a sample from them.  Just be careful to only use this for the final sample of the hidden spins and not all of them!</p>
 </div>
-</div>
-<div class="section" id="putting-it-together-and-mini-batches">
-<h3>Putting it together (and mini-batches)<a class="headerlink" href="#putting-it-together-and-mini-batches" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="putting-it-together-and-mini-batches">
+<h3>Putting it together (and mini-batches)<a class="headerlink" href="#putting-it-together-and-mini-batches" title="Permalink to this heading">#</a></h3>
 <p>Training the RBM with gradient descent amounts to approximately computing these expectation values by performing Gibbs sampling and updating the RBM parameters using the approximate gradients.</p>
 <p>A pseudocode of the gradient descent calculation is as follows:</p>
 <ul class="simple">
@@ -840,9 +638,9 @@ b_{j} &\rightarrow b_{j} - \eta \partial O/\partial b_{j}
 \end{align*}
 $$
  -->
-</div>
-<div class="section" id="testing">
-<h3>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="testing">
+<h3>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">Testing</p>
 <p>To convince yourself that you have a working RBM code, you need to perform some tests.
@@ -893,9 +691,9 @@ distribution of three binary variables and train an RBM with <span class="math n
 <p class="admonition-title">Grading</p>
 <p>Implement the RBM training algorithm. Using this algorithm, train your RBM and show that it can successfully learn a simple toy probability distribution.</p>
 </div>
-</div>
-<div class="section" id="free-energy">
-<h3>Free Energy<a class="headerlink" href="#free-energy" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="free-energy">
+<h3>Free Energy<a class="headerlink" href="#free-energy" title="Permalink to this heading">#</a></h3>
 <p>Recall that we are trying to optimize the KL-divergence: <span class="math notranslate nohighlight">\( q \ln q - q \ln p\)</span>.  The term <span class="math notranslate nohighlight">\(q \ln q\)</span> doesn’t change.  Therefore, we want to optimize that second term.   We can estimate how well we are doing by measuring the difference in free energy between the visible spins before sampling and after sampling.</p>
 <p>Recall that the free energy is defined as</p>
 <div class="math notranslate nohighlight">
@@ -914,11 +712,11 @@ distribution of three binary variables and train an RBM with <span class="math n
 <p>Write two functions that compute the free energy in both these ways.  Do some tests to verify that they give the same result for some choice of <span class="math notranslate nohighlight">\(v\)</span>.</p>
 <p>Now, run your RBM for 10 epochs and measure the average change in the free energy as a function of epoch.  Make a graph of this and paste it into your document   (as a word of warning, this estimator is very noisy so it might not always look monotonic as it should be).</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="applications-of-rbm">
-<h2>Applications of RBM<a class="headerlink" href="#applications-of-rbm" title="Permalink to this headline">#</a></h2>
+<section id="applications-of-rbm">
+<h2>Applications of RBM<a class="headerlink" href="#applications-of-rbm" title="Permalink to this heading">#</a></h2>
 <p>In the next part of this assignment, you will choose an application to apply your RBM too.  In most cases, this will involve making modifications to help improve the efficiency of your RBM. Choosing one of these applications will get you the extra 10 points you need for the assignment (90 up to here + 10 for the application).   You can do additional applications for an extra 5 points per application.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="RBM_MNIST.html"><span class="doc std std-doc">MNIST</span></a> 10 points</p></li>
@@ -984,8 +782,8 @@ Another idea is to interpret how RBMs learn during training. [Some argue](https:
 1. Using your Ising model code, sample spin configurations on a $27\times 27$ lattice and save them to a file. This will be your training data set.
 2. Train an RBM with $N_v=27\times 27$ visible spins and $N_h=9 \times 9$ hidden spins on your training data set. Think of your hidden layer as a $9 \times 9$ Ising model with 81 hidden neurons. When you train your RBM, don't allow all the connections. Instead only allow non-zero weights between the $3 \times 3$ blocks that you used when coarse-graining your Ising model in the RG unit.
 3. Once you've trained your Ising model, go ahead and look at the probability distribution of the hidden layer. What does it look like?
---></div>
-</div>
+--></section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -999,7 +797,7 @@ Another idea is to interpret how RBMs learn during training. [Some argue](https:
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./ML"
         },
         predefinedOutput: true
@@ -1007,50 +805,112 @@ Another idea is to interpret how RBMs learn during training. [Some argue](https:
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Hopfield.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Hopfield Networks</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Hopfield.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Hopfield Networks</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="Diffusion.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="Diffusion.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Generative Diffusion Models</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rbm-as-an-ising-model">RBM as an Ising Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-probability-distributions">Understanding Probability Distributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-and-sampling-an-rbm">Building and Sampling an RBM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unsupervised-learning-and-training-an-rbm">Unsupervised Learning and Training an RBM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-gradients">Computing Gradients</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#putting-it-together-and-mini-batches">Putting it together (and mini-batches)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy">Free Energy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-rbm">Applications of RBM</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Bryan Clark<br/>
-  
-      &copy; Copyright 2023.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Bryan Clark
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

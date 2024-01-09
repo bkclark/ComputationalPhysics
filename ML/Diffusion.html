@@ -1,44 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Generative Diffusion Models &#8212; Computing in Physics (Phy446)</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>Generative Diffusion Models &#8212; Computing in Physics (Phy446)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -48,499 +64,290 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ML/Diffusion';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Overview" href="../TI/Overview.html" />
     <link rel="prev" title="Restricted Boltzmann Machines" href="RBM.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Computing in Physics (Phy446)</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Setting up
- </span>
-</p>
+  
+
+<a class="navbar-brand logo" href="../Overview.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computing in Physics (Phy446)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setting up</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../GettingStarted.html">
-   Getting Setup
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted.html">Getting Setup</a></li>
+
+
+
+
+
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Cellular Automata
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cellular Automata</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/CellularAutomata.html">
-   Cellular Automata
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/Sand.html">
-   Sand
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/OtherAutomata.html">
-   Other Interesting Automata
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/CellularAutomata.html">Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/Sand.html">Sand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/OtherAutomata.html">Other Interesting Automata</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Quantum Computing
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Computing</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/0-DiracNotation.html">
-   Dirac Notation
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../QC/1a-QuantumComputingSimulator.html">
-   QC Simulator II
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/1b-QuantumComputingSimulator.html">
-     QC Simulator I(abcd)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/NonAtomicGates.html">
-   Non-atomic gates
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/PhaseEstimation.html">
-   Phase estimation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/QFT.html">
-   Quantum Fourier Transform
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../QC/Shor-Overview.html">
-   Shor’s Algorithm
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/Shor-Classical.html">
-     Shor’s Algorithm (classically)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/Shor-Quantum.html">
-     Quantum Matrix
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/ModularMultiplication.html">
-     Modular Multiplication
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/Shor-QuantumCircuit.html">
-     Shor’s Algorithm
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/0-DiracNotation.html">Dirac Notation</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QC/1a-QuantumComputingSimulator.html">QC Simulators</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QC/SimulatorS.html">Simulator S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/1b-QuantumComputingSimulator.html">Simulator M-(abcd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Measuring.html">Measuring and Input</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Quantum Computing (extensions)
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/NonAtomicGates.html">Non-atomic gates</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../QC/PhaseEstimation.html">Phase estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/QFT.html">Quantum Fourier Transform</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QC/Shor-Overview.html">Shor’s Algorithm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Shor-Classical.html">Shor’s Algorithm (classically)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Shor-Quantum.html">Quantum Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/ModularMultiplication.html">Modular Multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Shor-QuantumCircuit.html">Shor’s Algorithm</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Computing (extensions)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../QC/Gates.html">
-   Gates
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/ClassicalGates.html">
-     Classical Gates
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/ControlledGates.html">
-     Controlled Gates
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/Universal.html">
-     Gates for any Unitary
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/BQPinPSPACE.html">
-   BQP in PSPACE
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QC/Gates.html">Gates</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QC/ClassicalGates.html">Classical Gates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/ControlledGates.html">Controlled Gates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Universal.html">Gates for any Unitary</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ising Model
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/BQPinPSPACE.html">BQP in PSPACE</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ising Model</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/IsingModel.html">
-   Simulating an Ising Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/Measure.html">
-   Measuring the Ising Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/RG.html">
-   The Renormalization Group
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/ParallelTempering.html">
-   Extra Credit: Parallel Tempering
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/SimulatedAnnealing.html">
-   Extra Credit: Simulated Annealing
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/IsingModel.html">Simulating an Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/Measure.html">Measuring the Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/RG.html">The Renormalization Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/ParallelTempering.html">Extra Credit: Parallel Tempering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/SimulatedAnnealing.html">Extra Credit: Simulated Annealing</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Machine Learning
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Hopfield.html">
-   Hopfield Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="RBM.html">
-   Restricted Boltzmann Machines
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Generative Diffusion Models
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hopfield.html">Hopfield Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RBM.html">Restricted Boltzmann Machines</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Generative Diffusion Models</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Topological Insulators
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topological Insulators</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/Lattice.html">
-   Lattices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/TightBinding.html">
-   Tight Binding Models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/ChernInsulators.html">
-   Topological Insulators
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/Lattice.html">Lattices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/TightBinding.html">Tight Binding Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/ChernInsulators.html">Topological Insulators</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
 
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diffusion">
-   Diffusion
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#approach-1">
-     Approach 1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#approach-2">
-     Approach 2
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#approach-3">
-     Approach 3
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-next-step-faster-diffusing">
-   The Next Step: Faster Diffusing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#undiffusing">
-   Undiffusing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#training">
-   Training
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prompts">
-   Prompts
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Generative Diffusion Models</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diffusion">
-   Diffusion
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#approach-1">
-     Approach 1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#approach-2">
-     Approach 2
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#approach-3">
-     Approach 3
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-next-step-faster-diffusing">
-   The Next Step: Faster Diffusing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#undiffusing">
-   Undiffusing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#training">
-   Training
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prompts">
-   Prompts
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Generative Diffusion Models</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diffusion">Diffusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-1">Approach 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-2">Approach 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-3">Approach 3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-next-step-faster-diffusing">The Next Step: Faster Diffusing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#undiffusing">Undiffusing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training">Training</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prompts">Prompts</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -549,11 +356,11 @@ title="Fullscreen mode"
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="generative-diffusion-models">
-<h1>Generative Diffusion Models<a class="headerlink" href="#generative-diffusion-models" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="generative-diffusion-models">
+<h1>Generative Diffusion Models<a class="headerlink" href="#generative-diffusion-models" title="Permalink to this heading">#</a></h1>
 <p>Our goal in this assignment is to understand generative models like stable diffusion.  In stable diffusion, you type a string and it generates a picture of that string.  For this assignment, we are going to get to 70% of that understanding.</p>
-<div class="section" id="diffusion">
-<h2>Diffusion<a class="headerlink" href="#diffusion" title="Permalink to this headline">#</a></h2>
+<section id="diffusion">
+<h2>Diffusion<a class="headerlink" href="#diffusion" title="Permalink to this heading">#</a></h2>
 <p>We are going to start by thinking about diffusion. Consider a pollen particle which is being buffeted by air.  If we weren’t paying attention to the air, but instead just the pollen particle, what we would expect to see is that the pollen particle would ocassionally jump in random directions as the air is hitting it.  We might model this by saying that at time <span class="math notranslate nohighlight">\(t\)</span> the particle is at <span class="math notranslate nohighlight">\(x_t = x_{t-1} +\sqrt{\delta} z\)</span> where <span class="math notranslate nohighlight">\(z \sim N(0,1)\)</span> is a random guassian number with unit standard deviation.   Now if the pollen was also in some sort of potential <span class="math notranslate nohighlight">\(E(x)\)</span> (say a gravitational field or a harmonic oscillator) we would expect it to also drift with the force induced by this potential.  This motivates the Langevin equation</p>
 <div class="math notranslate nohighlight">
 \[x_t = x_{t-1} + \frac{\delta}{2} F(x_{t-1})+ \sqrt{\delta} z \]</div>
@@ -565,8 +372,8 @@ title="Fullscreen mode"
 <li><p>Make another Markov chain that we know has the right probabilty distribution and show that it is equivalent to Langevin dynamics</p></li>
 <li><p>Demonstrate that the Langevin equation has the right dynamics</p></li>
 </ul>
-<div class="section" id="approach-1">
-<h3>Approach 1<a class="headerlink" href="#approach-1" title="Permalink to this headline">#</a></h3>
+<section id="approach-1">
+<h3>Approach 1<a class="headerlink" href="#approach-1" title="Permalink to this heading">#</a></h3>
 <p>We will start with the first approach.  Write a function</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ForwardDiffusion</span><span class="p">(</span><span class="n">x_0</span><span class="p">,</span><span class="n">T</span><span class="p">,</span> <span class="n">delta</span><span class="p">):</span>
   <span class="c1"># do stuff</span>
@@ -580,9 +387,9 @@ title="Fullscreen mode"
 <div class="math notranslate nohighlight">
 \[P(x) = \frac{1}{\sqrt{2\pi}} \exp[-x^2/2]\]</div>
 </div>
-</div>
-<div class="section" id="approach-2">
-<h3>Approach 2<a class="headerlink" href="#approach-2" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="approach-2">
+<h3>Approach 2<a class="headerlink" href="#approach-2" title="Permalink to this heading">#</a></h3>
 <p>We can alternatively start with a Markov chain that we know the stationary distribution to - i.e. the Metropolis Markov chain.</p>
 <p>In this section we are trying to reason about why the forward diffusion equation generated a probability distribution <span class="math notranslate nohighlight">\(P(x) \propto \exp[-E(x)]\)</span>.  The algorithm that we described is clearly a Markov chain - i.e. the probabilistic locations of the next step only depend on the current locations.  Therefore there needs to be some stationary distribution.  Our goal is just to figure out which one.  Unfortunately, we don’t know how to easily reason about the stationary distributions.  Let’s see if instead we can start with a Markov chain that we do understand and which generates the right distribution and massage it into the equation above.</p>
 <p>One Markov chain we do understand is the Metropolis method.  In the Metropolis method, we know that we should choose a move from <span class="math notranslate nohighlight">\(x\)</span> to <span class="math notranslate nohighlight">\(x'\)</span> with probability <span class="math notranslate nohighlight">\(T(x \rightarrow x')\)</span> and then we should accept that move with probability</p>
@@ -612,9 +419,9 @@ title="Fullscreen mode"
 <p>Go ahead and show that the acceptance ratio is 1 by running this in a Monte Carlo and computing the acceptance ratio.</p>
 <p>In addition, you can check this by choosing a series of <span class="math notranslate nohighlight">\(x\)</span> points (no Monte Carlo involved), choose an <span class="math notranslate nohighlight">\(x'\)</span> by the Langevin equation and verify that the acceptance ratio for this would be essentially 1.0 if you made this move. Use <span class="math notranslate nohighlight">\(\delta =0.05\)</span></p>
 </div>
-</div>
-<div class="section" id="approach-3">
-<h3>Approach 3<a class="headerlink" href="#approach-3" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="approach-3">
+<h3>Approach 3<a class="headerlink" href="#approach-3" title="Permalink to this heading">#</a></h3>
 <p>The two previous approaches were essentially showing that the Langevin equation gives us the stationary distribution we want numerically.  We can also show this analytically.</p>
 <p>Starting from a generalized version of the Langevin eqution, <span class="math notranslate nohighlight">\(x(t + \Delta t) = x(t) + l(t) + F\gamma\Delta t\)</span>, where <span class="math notranslate nohighlight">\(l(t)\)</span> is essentially any reasonable symmetric random perturbation.</p>
 <p>You can show that this satisfies the diffusion equation,</p>
@@ -629,10 +436,10 @@ title="Fullscreen mode"
 <div class="math notranslate nohighlight">
 \[ \rho(x) = \mathcal C \exp\left( -\frac{\gamma}{D} E(x) \right)\]</div>
 <p>Interestingly, this is very closely related to a method for simulating quantum ground states - diffusion Monte Carlo.</p>
-</div>
-</div>
-<div class="section" id="the-next-step-faster-diffusing">
-<h2>The Next Step: Faster Diffusing<a class="headerlink" href="#the-next-step-faster-diffusing" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="the-next-step-faster-diffusing">
+<h2>The Next Step: Faster Diffusing<a class="headerlink" href="#the-next-step-faster-diffusing" title="Permalink to this heading">#</a></h2>
 <p>So far, we’ve learned that the Langevin dynamics (in the limit of small-ish <span class="math notranslate nohighlight">\(\delta\)</span>) are a Markov chain which ends up in the probability distribution proportional to <span class="math notranslate nohighlight">\(p(x) \propto \exp[-E(x)]\)</span>.</p>
 <p>We are now going to focus explicitly on the energy functional for a harmonic oscillator <span class="math notranslate nohighlight">\(E(x) = x^2/2\)</span> and we are going to generalize our diffusion to allow different step sizes at each step (as well as do a somewhat unfortunate change of variables - this will ensure that we are consistent with both the Langevin literature (from above) and the diffusion literature (now below)).</p>
 <p>Using this energy function, we get</p>
@@ -672,9 +479,9 @@ and
 <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">ForwardDiffusionFast(x_0,alpha_bar_t,timeSteps):</span></code>
 which quickly generates the same distribution as ForwardDiffusion.  Plot a histogram of ForwardDiffusionFast out to T=200 and check that you get the same probability distribution as ForwardDiffusion</p>
 </div>
-</div>
-<div class="section" id="undiffusing">
-<h2>Undiffusing<a class="headerlink" href="#undiffusing" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="undiffusing">
+<h2>Undiffusing<a class="headerlink" href="#undiffusing" title="Permalink to this heading">#</a></h2>
 <p>Our next step is to figure out how to undiffuse.</p>
 <p>In our forward diffusion process we have samples <span class="math notranslate nohighlight">\(x_0\)</span> from an initial distriution <span class="math notranslate nohighlight">\(p_{init}(x_0)\)</span> which we forward diffuse</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">SamplePInit</span><span class="p">()</span>
@@ -757,9 +564,9 @@ where <span class="math notranslate nohighlight">\(z^g_t\)</span> is our guess f
 <p>Do the undiffusion from this probabaility distribution.  Plot the same plots from the undiffusion from a single delta function.</p>
 <p>In addition, notice that at each step in your diffusion you are making a guess for <span class="math notranslate nohighlight">\(z\)</span>.  This corresponds to a guess for <span class="math notranslate nohighlight">\(x_0\)</span>.  For ten runs, graph the guess as a function of <span class="math notranslate nohighlight">\(t\)</span>.</p>
 </div>
-</div>
-<div class="section" id="training">
-<h2>Training<a class="headerlink" href="#training" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="training">
+<h2>Training<a class="headerlink" href="#training" title="Permalink to this heading">#</a></h2>
 <p>So far we’ve managed to do undiffusion where we know what the right guess for the random number <span class="math notranslate nohighlight">\(z_g\)</span> is.  But in practice we don’t always know this.  Now, we’d like to work in a situation where we don’t know this.  Instead, we are going to train a neural network which learns the noise.</p>
 <p>To do this, we are going to use pytorch.  To generate a simple neural network using pytorch, we can have</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
@@ -811,9 +618,9 @@ where <span class="math notranslate nohighlight">\(z^g_t\)</span> is our guess f
 <p class="admonition-title">Grading</p>
 <p>Generate these plots.</p>
 </div>
-</div>
-<div class="section" id="prompts">
-<h2>Prompts<a class="headerlink" href="#prompts" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="prompts">
+<h2>Prompts<a class="headerlink" href="#prompts" title="Permalink to this heading">#</a></h2>
 <p>Finally in programs such as stable diffusion, you give the program a prompt and ask it to produce that image - i.e. astronaut on a horse.  In our simple example here, we are going to also give our simulation a prompt:  we will work with a simple version of this telling it either “left” or “right” to ask it to either find the point below zero or above zero.</p>
 <p>To accomplish this, during the training we need to give our network not only the diffused location <span class="math notranslate nohighlight">\(x_t\)</span> and the time <span class="math notranslate nohighlight">\(t\)</span> but also the prompt-information.  It needs to give it this information both during training and undiffusing.  That way, during training it will learn to be biased toward the right location conditioned on the prompt.  We will embed as “left” equals -1 and “right” equals 1 - i.e. <code class="docutils literal notranslate"><span class="pre">embedPrompt</span> <span class="pre">=</span> <span class="pre">-1</span> <span class="pre">if</span> <span class="pre">prompt==&quot;left&quot;</span> <span class="pre">else</span> <span class="pre">1</span></code></p>
 <p>Modify your network to take an extra input:</p>
@@ -841,8 +648,8 @@ where <span class="math notranslate nohighlight">\(z^g_t\)</span> is our guess f
 <p>One set should be when the prompt is “left” and one set should be when the prompt is “right.”</p>
 </div>
 <p>Please continue onto <a class="reference internal" href="Diffusion2.html"><span class="doc std std-doc">3.2 Diffusion Models - page 2</span></a></p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -856,7 +663,7 @@ where <span class="math notranslate nohighlight">\(z^g_t\)</span> is our guess f
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./ML"
         },
         predefinedOutput: true
@@ -864,50 +671,111 @@ where <span class="math notranslate nohighlight">\(z^g_t\)</span> is our guess f
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="RBM.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Restricted Boltzmann Machines</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="RBM.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Restricted Boltzmann Machines</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../TI/Overview.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../TI/Overview.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Overview</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diffusion">Diffusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-1">Approach 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-2">Approach 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-3">Approach 3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-next-step-faster-diffusing">The Next Step: Faster Diffusing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#undiffusing">Undiffusing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training">Training</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prompts">Prompts</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Bryan Clark<br/>
-  
-      &copy; Copyright 2023.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Bryan Clark
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

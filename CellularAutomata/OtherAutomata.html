@@ -1,44 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Other Interesting Automata &#8212; Computing in Physics (Phy446)</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>Other Interesting Automata &#8212; Computing in Physics (Phy446)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -46,517 +62,293 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'CellularAutomata/OtherAutomata';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Overview" href="../QC/Overview.html" />
     <link rel="prev" title="Sand" href="Sand.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Computing in Physics (Phy446)</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Setting up
- </span>
-</p>
+  
+
+<a class="navbar-brand logo" href="../Overview.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computing in Physics (Phy446)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setting up</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../GettingStarted.html">
-   Getting Setup
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted.html">Getting Setup</a></li>
+
+
+
+
+
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Cellular Automata
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cellular Automata</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="CellularAutomata.html">
-   Cellular Automata
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Sand.html">
-   Sand
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Other Interesting Automata
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="CellularAutomata.html">Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sand.html">Sand</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Other Interesting Automata</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Quantum Computing
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Computing</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/0-DiracNotation.html">
-   Dirac Notation
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../QC/1a-QuantumComputingSimulator.html">
-   QC Simulator II
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/1b-QuantumComputingSimulator.html">
-     QC Simulator I(abcd)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/NonAtomicGates.html">
-   Non-atomic gates
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/PhaseEstimation.html">
-   Phase estimation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/QFT.html">
-   Quantum Fourier Transform
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../QC/Shor-Overview.html">
-   Shor’s Algorithm
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/Shor-Classical.html">
-     Shor’s Algorithm (classically)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/Shor-Quantum.html">
-     Quantum Matrix
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/ModularMultiplication.html">
-     Modular Multiplication
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/Shor-QuantumCircuit.html">
-     Shor’s Algorithm
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/0-DiracNotation.html">Dirac Notation</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QC/1a-QuantumComputingSimulator.html">QC Simulators</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QC/SimulatorS.html">Simulator S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/1b-QuantumComputingSimulator.html">Simulator M-(abcd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Measuring.html">Measuring and Input</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Quantum Computing (extensions)
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../QC/Gates.html">
-   Gates
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/ClassicalGates.html">
-     Classical Gates
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/ControlledGates.html">
-     Controlled Gates
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../QC/Universal.html">
-     Gates for any Unitary
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../QC/BQPinPSPACE.html">
-   BQP in PSPACE
-  </a>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/NonAtomicGates.html">Non-atomic gates</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../QC/PhaseEstimation.html">Phase estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/QFT.html">Quantum Fourier Transform</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QC/Shor-Overview.html">Shor’s Algorithm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Shor-Classical.html">Shor’s Algorithm (classically)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Shor-Quantum.html">Quantum Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/ModularMultiplication.html">Modular Multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Shor-QuantumCircuit.html">Shor’s Algorithm</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ising Model
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/IsingModel.html">
-   Simulating an Ising Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/Measure.html">
-   Measuring the Ising Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/RG.html">
-   The Renormalization Group
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/ParallelTempering.html">
-   Extra Credit: Parallel Tempering
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/SimulatedAnnealing.html">
-   Extra Credit: Simulated Annealing
-  </a>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Machine Learning
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Computing (extensions)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/Hopfield.html">
-   Hopfield Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/RBM.html">
-   Restricted Boltzmann Machines
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/Diffusion.html">
-   Generative Diffusion Models
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QC/Gates.html">Gates</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QC/ClassicalGates.html">Classical Gates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/ControlledGates.html">Controlled Gates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QC/Universal.html">Gates for any Unitary</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Topological Insulators
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../QC/BQPinPSPACE.html">BQP in PSPACE</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ising Model</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/Lattice.html">
-   Lattices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/TightBinding.html">
-   Tight Binding Models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/ChernInsulators.html">
-   Topological Insulators
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/IsingModel.html">Simulating an Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/Measure.html">Measuring the Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/RG.html">The Renormalization Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/ParallelTempering.html">Extra Credit: Parallel Tempering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/SimulatedAnnealing.html">Extra Credit: Simulated Annealing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ML/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ML/Hopfield.html">Hopfield Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ML/RBM.html">Restricted Boltzmann Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ML/Diffusion.html">Generative Diffusion Models</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topological Insulators</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../TI/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/Lattice.html">Lattices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/TightBinding.html">Tight Binding Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/ChernInsulators.html">Topological Insulators</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
 
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cellular-automata-for-simulating-physical-systems">
-   Cellular Automata for Simulating Physical Systems
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#interacting-lattice-gases">
-     Interacting lattice Gases
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cellular-automata-for-fluids">
-     Cellular Automata for Fluids
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cellular-automata-to-get-something-that-looks-like-ameoba">
-     Cellular Automata to get something that looks like Ameoba
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#universal-computation">
-   Universal Computation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#one-dimensional-automata">
-     One-dimensional automata
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-game-of-life">
-     The game of life
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Other Interesting Automata</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cellular-automata-for-simulating-physical-systems">
-   Cellular Automata for Simulating Physical Systems
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#interacting-lattice-gases">
-     Interacting lattice Gases
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cellular-automata-for-fluids">
-     Cellular Automata for Fluids
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cellular-automata-to-get-something-that-looks-like-ameoba">
-     Cellular Automata to get something that looks like Ameoba
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#universal-computation">
-   Universal Computation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#one-dimensional-automata">
-     One-dimensional automata
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-game-of-life">
-     The game of life
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Other Interesting Automata</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-computation">Universal Computation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-dimensional-automata">One-dimensional automata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-game-of-life">The game of life</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="other-interesting-automata">
-<h1>Other Interesting Automata<a class="headerlink" href="#other-interesting-automata" title="Permalink to this headline">#</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="other-interesting-automata">
+<h1>Other Interesting Automata<a class="headerlink" href="#other-interesting-automata" title="Permalink to this heading">#</a></h1>
 <p><strong>There is nothing due on this page.  It is just additional examples and information about automata.</strong></p>
 <p>There are two common applications of cellular automata.  In the one case, they are often used as minimal models for physical phenomena.  We saw this in the previous page where we used a cellular automata as a simple model of a diffusing gas and from this computed the entropy and approach to equilibration.</p>
 <p>Another interesting application is to show that cellular automata are able to build universal classical computation - i.e. you can program a celluluar automate which simulates any computation that you can do on your macbook.  This really speaks to the fact that computing is a universal phenomena - from almost any simple physical rules, we can build devices which compute anything.</p>
-<p>These things are not completely unrelated.  The Church-Turing thesis tells us that any physical computing device can be simulated by any other physical computing device.  We will think about a modified form of this thesis - the modified church Turing thesis - which indicates that any physical computing device can be simulated by any other physical computing device without a significant loss of efficiency.  It turns out that quantum computers are one of the only known counterexamples of this.</p>
-<div class="section" id="cellular-automata-for-simulating-physical-systems">
-<h2>Cellular Automata for Simulating Physical Systems<a class="headerlink" href="#cellular-automata-for-simulating-physical-systems" title="Permalink to this headline">#</a></h2>
-<div class="section" id="interacting-lattice-gases">
-<h3>Interacting lattice Gases<a class="headerlink" href="#interacting-lattice-gases" title="Permalink to this headline">#</a></h3>
-<p>We can generalize our original lattice gas cellular automaton a bit by adding interactions between the atoms. This gives us a more realistic model of a gas. We can also look at how entropy increases in the interacting system and compare it with the entropy in the non-interacting system.</p>
-</div>
-<div class="section" id="cellular-automata-for-fluids">
-<h3>Cellular Automata for Fluids<a class="headerlink" href="#cellular-automata-for-fluids" title="Permalink to this headline">#</a></h3>
-<p>Not only can cellular automata be used to model gases, they can also be used to model fluids. By designing a cellular automaton with simple rules based on a cartoon model of molecular dynamics, you can obtain, from a non-microscopic viewpoint, dynamical behavior that mimics fluid flow. A particular cellular automaton that does this is known at the lattice gas FHP model. The sites of the automaton are arranged on a triangular lattice (with hexagonal symmetry) and each site has six possible states. If you’re bored and feeling ambitious this is really cool and you should try to implement it. An explanation of the FHP model can be found in Section 3.2 of this <a class="reference external" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.476.4690&amp;rep=rep1&amp;type=pdf">book</a>.</p>
-</div>
-<div class="section" id="cellular-automata-to-get-something-that-looks-like-ameoba">
-<h3>Cellular Automata to get something that looks like Ameoba<a class="headerlink" href="#cellular-automata-to-get-something-that-looks-like-ameoba" title="Permalink to this headline">#</a></h3>
-<p>You can check out this work which uses a continuous version of cellular automata to make a model of creatures that appear like ameoba:  <a class="reference external" href="https://arxiv.org/pdf/1812.05433.pdf">https://arxiv.org/pdf/1812.05433.pdf</a></p>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="universal-computation">
-<h2>Universal Computation<a class="headerlink" href="#universal-computation" title="Permalink to this headline">#</a></h2>
+<p>These things are not completely unrelated.  The Church-Turing thesis tells us that any physical computing device can be simulated by any other physical computing device.  We will discuss a modified form of this thesis - the modified church Turing thesis - which indicates that any physical computing device can be simulated by any other physical computing device without a significant loss of efficiency.  It turns out that quantum computers are one of the only known counterexamples of this.</p>
+<section id="universal-computation">
+<h2>Universal Computation<a class="headerlink" href="#universal-computation" title="Permalink to this heading">#</a></h2>
 <p>We’ve seen that cellular automata can produce fairly complicated behavior. In spite of that, you’ve managed to write a simple program on your laptop that simulates this behavior.  Because you can do such a simulation, this means your laptop is at least as computationally powerful as a cellular automata. This is called a reduction.</p>
 <p>The set of problems that your laptop can solve are called computable problems.  Your laptop is a type of machine called a Von Neumann machine (it has RAM, CPU, etc.)  There is another class of machines called Turing Machines.  Turing Machines have</p>
 <ul class="simple">
@@ -578,14 +370,16 @@ title="Fullscreen mode"
 <p>Chaos tells us about things that are unpredictable because of arbitrary sensitivity to initial conditions.  This is fundamentally different then the unanswerable questions above which are discrete and have no initial-condition issues.</p>
 <p><strong>Billiard Balls</strong></p>
 <p>You might wonder if Billiard Balls can also be universal computers.  In fact, they can.  You can just make collisions of the billiard balls (with mirrors) act like gates. See [Margolus, N. H. (1988). Physics and computation (No. MIT/LCS/TR-415). MASSACHUSETTS INST OF TECH CAMBRIDGE LAB FOR COMPUTER SCIENCE.] for a nice discussion of this.</p>
+<p><strong>Turing Tumble</strong></p>
+<p>There is a children’s toy, <a class="reference external" href="https://upperstory.com/turingtumble/">Turing Tumble</a> where one can do universal quantum computational with marbles.</p>
 <hr class="docutils" />
-<div class="section" id="one-dimensional-automata">
-<h3>One-dimensional automata<a class="headerlink" href="#one-dimensional-automata" title="Permalink to this headline">#</a></h3>
+<section id="one-dimensional-automata">
+<h3>One-dimensional automata<a class="headerlink" href="#one-dimensional-automata" title="Permalink to this heading">#</a></h3>
 <p>Various other interesting cellular automata rules exist.  Wolfram has enumerated many of these one-dimensional automata (which you can visualize actually the full space-time evolution in 2d).  Of particular interest are Wolfram <a class="reference external" href="http://mathworld.wolfram.com/Rule30.html">rule 30</a> and <a class="reference external" href="http://mathworld.wolfram.com/Rule110.html">rule 110</a> (also universal)</p>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="the-game-of-life">
-<h3>The game of life<a class="headerlink" href="#the-game-of-life" title="Permalink to this headline">#</a></h3>
+<section id="the-game-of-life">
+<h3>The game of life<a class="headerlink" href="#the-game-of-life" title="Permalink to this heading">#</a></h3>
 <p>Cellular automata consists of a grid in space where each pixel on the grid is in some state (maybe black or white).  Throughout much of this course, the first question we will often ask ourself about a simulation is what describes its state - i.e. what do I have to store in my computer.   Then there are some simple rules which tell you how to  change the state of your automata.</p>
 <p>The most popular cellular automata is John Conway’s game of life.  In this cellular automata, each square is either black or white.  Notice that on a square lattice, every cell has eight cells around it. The rules are pretty simple:</p>
 <ul class="simple">
@@ -600,21 +394,14 @@ title="Fullscreen mode"
 <a class="reference external" href="https://en.wikipedia.org/wiki/Von_Neumann_universal_constructor">https://en.wikipedia.org/wiki/Von_Neumann_universal_constructor</a></p>
 <p>What this means is you should be able to program anything - say a game of Tetris - just using the simple rules of the game of life above.  Here is an amazing example where people actually did so:</p>
 <p><a class="reference external" href="https://codegolf.stackexchange.com/questions/11880/build-a-working-game-of-tetris-in-conways-game-of-life">https://codegolf.stackexchange.com/questions/11880/build-a-working-game-of-tetris-in-conways-game-of-life</a></p>
-<!-- Suggestion: Add a Graded checkpoint here with something specific to do with Conway's game of life. -->
- <!-- Here also we will coarse grain but instead of looking at complexity and thinking of a mixture of black and white being cream instead we will squint in such a way that the set of nine squares are either all black or all white. -->
-<hr class="docutils" />
-<hr class="docutils" />
 <!--
-#### Entropy
-
-Entropy is a measure of how disordered a system is.  We've all learned at some point that entropy increases montonically.  Physically, what's going on is pretty simple.  There are lots more disordered states then ordered states.  Therefore, if a system is going to sample all the microstates, then it's going to spend most of its time in the disordered states.  One way to characterize disordered states is to look at how compactly we can describe them.  We are going to measure this by trying to compress our states.  If a state can be effectively compressed then there is a short description.  If it can't be compressed, then it must be because there isn't much pattern to it. It's essentially disordered.
 
 #### Complexity
 
 The concept of entropy, though, hides something interesting.  A gas in a box has a high amount of entropy (there's no simple way to describe where all the atoms are), but it also seems really boring.  We can describe it with a few simple parameters:  its density, etc.  But there are also low entropy states with very simple descriptions (all of the atoms on one half of the box).  So is their something better that encodes our general view of complexity?  One might
---></div>
-</div>
-</div>
+--></section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -628,7 +415,7 @@ The concept of entropy, though, hides something interesting.  A gas in a box has
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./CellularAutomata"
         },
         predefinedOutput: true
@@ -636,50 +423,106 @@ The concept of entropy, though, hides something interesting.  A gas in a box has
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Sand.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Sand</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Sand.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Sand</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../QC/Overview.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../QC/Overview.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Overview</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-computation">Universal Computation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-dimensional-automata">One-dimensional automata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-game-of-life">The game of life</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Bryan Clark<br/>
-  
-      &copy; Copyright 2023.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Bryan Clark
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

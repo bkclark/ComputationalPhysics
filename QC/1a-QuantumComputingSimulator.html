@@ -1,44 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QC Simulator II &#8212; Computing in Physics (Phy446)</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>QC Simulators &#8212; Computing in Physics (Phy446)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -48,490 +64,313 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'QC/1a-QuantumComputingSimulator';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="QC Simulator I(abcd)" href="1b-QuantumComputingSimulator.html" />
+    <link rel="next" title="Simulator S" href="SimulatorS.html" />
     <link rel="prev" title="Dirac Notation" href="0-DiracNotation.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Computing in Physics (Phy446)</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Setting up
- </span>
-</p>
+  
+
+<a class="navbar-brand logo" href="../Overview.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computing in Physics (Phy446)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setting up</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../GettingStarted.html">
-   Getting Setup
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted.html">Getting Setup</a></li>
+
+
+
+
+
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Cellular Automata
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cellular Automata</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/CellularAutomata.html">
-   Cellular Automata
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/Sand.html">
-   Sand
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/OtherAutomata.html">
-   Other Interesting Automata
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/CellularAutomata.html">Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/Sand.html">Sand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/OtherAutomata.html">Other Interesting Automata</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Quantum Computing
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Computing</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="0-DiracNotation.html">
-   Dirac Notation
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   QC Simulator II
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1b-QuantumComputingSimulator.html">
-     QC Simulator I(abcd)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="NonAtomicGates.html">
-   Non-atomic gates
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="PhaseEstimation.html">
-   Phase estimation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="QFT.html">
-   Quantum Fourier Transform
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Shor-Overview.html">
-   Shor’s Algorithm
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Shor-Classical.html">
-     Shor’s Algorithm (classically)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Shor-Quantum.html">
-     Quantum Matrix
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ModularMultiplication.html">
-     Modular Multiplication
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Shor-QuantumCircuit.html">
-     Shor’s Algorithm
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0-DiracNotation.html">Dirac Notation</a></li>
+
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">QC Simulators</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="SimulatorS.html">Simulator S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1b-QuantumComputingSimulator.html">Simulator M-(abcd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Measuring.html">Measuring and Input</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Quantum Computing (extensions)
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Gates.html">
-   Gates
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ClassicalGates.html">
-     Classical Gates
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ControlledGates.html">
-     Controlled Gates
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Universal.html">
-     Gates for any Unitary
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="BQPinPSPACE.html">
-   BQP in PSPACE
-  </a>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NonAtomicGates.html">Non-atomic gates</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="PhaseEstimation.html">Phase estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QFT.html">Quantum Fourier Transform</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Shor-Overview.html">Shor’s Algorithm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Shor-Classical.html">Shor’s Algorithm (classically)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shor-Quantum.html">Quantum Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModularMultiplication.html">Modular Multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shor-QuantumCircuit.html">Shor’s Algorithm</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ising Model
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/IsingModel.html">
-   Simulating an Ising Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/Measure.html">
-   Measuring the Ising Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/RG.html">
-   The Renormalization Group
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/ParallelTempering.html">
-   Extra Credit: Parallel Tempering
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/SimulatedAnnealing.html">
-   Extra Credit: Simulated Annealing
-  </a>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Machine Learning
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Computing (extensions)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/Hopfield.html">
-   Hopfield Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/RBM.html">
-   Restricted Boltzmann Machines
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/Diffusion.html">
-   Generative Diffusion Models
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Gates.html">Gates</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ClassicalGates.html">Classical Gates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ControlledGates.html">Controlled Gates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Universal.html">Gates for any Unitary</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Topological Insulators
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BQPinPSPACE.html">BQP in PSPACE</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ising Model</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/Lattice.html">
-   Lattices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/TightBinding.html">
-   Tight Binding Models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/ChernInsulators.html">
-   Topological Insulators
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/IsingModel.html">Simulating an Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/Measure.html">Measuring the Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/RG.html">The Renormalization Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/ParallelTempering.html">Extra Credit: Parallel Tempering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/SimulatedAnnealing.html">Extra Credit: Simulated Annealing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ML/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ML/Hopfield.html">Hopfield Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ML/RBM.html">Restricted Boltzmann Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ML/Diffusion.html">Generative Diffusion Models</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topological Insulators</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../TI/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/Lattice.html">Lattices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/TightBinding.html">Tight Binding Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/ChernInsulators.html">Topological Insulators</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
 
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#minimal-background">
-   Minimal Background
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quantum-simulator-ii">
-   Quantum Simulator II
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measuring">
-   Measuring
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#input">
-   Input
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>QC Simulator II</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#minimal-background">
-   Minimal Background
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quantum-simulator-ii">
-   Quantum Simulator II
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measuring">
-   Measuring
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#input">
-   Input
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>QC Simulators</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gates">Gates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuits">Circuits</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="qc-simulator-ii">
-<h1>QC Simulator II<a class="headerlink" href="#qc-simulator-ii" title="Permalink to this headline">#</a></h1>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="qc-simulators">
+<h1>QC Simulators<a class="headerlink" href="#qc-simulators" title="Permalink to this heading">#</a></h1>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>“Quantum Computation and Quantum Information” by Nielsen and Chuang. The first two chapters provide a detailed and self-contained introduction and explanation of qubits and quantum gates.</p></li>
 <li><p><a class="reference external" href="http://www-inst.eecs.berkeley.edu/~cs191/sp12/">Lecture notes</a> for the course “Qubits, quantum mechanics, and computers” from Umesh Vazirani at Berkeley.</p></li>
 <li><p><a class="reference external" href="http://www.theory.caltech.edu/people/preskill/ph229/">Lecture notes</a> from John Preskill at Caltech.</p></li>
-<li><p>Lecture notes from Ryan O’Donnell and John Wright at CMU. <a class="reference external" href="https://www.cs.cmu.edu/~odonnell/quantum15/lecture01.pdf">First</a> and <a class="reference external" href="https://www.cs.cmu.edu/~odonnell/quantum15/lecture02.pdf">second</a> lectures cover basic quantum mechanics and quantum gates.</p></li>
+<li><p>Lecture notes from Ryan O’Donnell} and John Wright at CMU. <a class="reference external" href="https://www.cs.cmu.edu/~odonnell/quantum15/lecture01.pdf">First</a> and <a class="reference external" href="https://www.cs.cmu.edu/~odonnell/quantum15/lecture02.pdf">second</a> lectures cover basic quantum mechanics and quantum gates.</p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Qubit">Wikipedia article</a> on qubits.</p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Quantum_gate">Wikipedia article</a> on quantum gates.</p></li>
-<li><p><span class="xref myst">A very rough draft of notes on quantum computing we put together when we were thinking what this course would look like</span></p></li>
 </ul>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="minimal-background">
-<h2>Minimal Background<a class="headerlink" href="#minimal-background" title="Permalink to this headline">#</a></h2>
-<p>In the previous section, we learned about how to represent a quantum state on a set of wires.  In this section, we are going to learn about quantum gates.</p>
-<p>A quantum gate changes the state of the quantum system.</p>
-<p>Let’s start with thinking about a gate (say a Hadamard) on one wire.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">----</span><span class="n">H</span><span class="o">----</span>
-</pre></div>
-</div>
-<p>One way to understand this gate is to understand what it does to <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>.</p>
-<p>In particular a <strong>Hadamard</strong> takes</p>
+<section id="gates">
+<h2>Gates<a class="headerlink" href="#gates" title="Permalink to this heading">#</a></h2>
+<p>In the previous section, we learned about how to represent a quantum state on a set of wires.  In this section, we are going to learn about quantum gates and quantum circuits (which are composed of multiple quantum gates).</p>
+<p>A quantum gate (or quantum circuit) transforms a quantum state to another quantum state.</p>
+<p>We will build two different brands of simulators.</p>
+<ul class="simple">
+<li><p>Our first simulator (Simulator S) will directly view gates as transforming quantum state to quantum states.</p></li>
+<li><p>Our second simulator (Simulator M) will instead view gates (and circuits) as representing (unitary) matrices. These matrices will then multiply the state vector and convert it to another state vector.</p></li>
+</ul>
+<p>Of course, these are two different ways of viewing the same thing (but will result in different simulators).</p>
+<p>Both of our simulator brands are going to (primarily) use three different gates.  Below each gate, we include some information about them for later reference - you’ll understand how this information is useful later.</p>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>The Hadamard Gate:  <strong>H</strong></p></li>
+</ul>
+<p><img alt="" src="../_images/H1.png" /></p>
 <div class="math notranslate nohighlight">
 \[
 |0\rangle \rightarrow \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)
@@ -540,44 +379,18 @@ title="Fullscreen mode"
 \[
 |1\rangle \rightarrow \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)
 \]</div>
-<p>It turns out because quantum mechanics is linear, this is all that we need to know because then</p>
 <div class="math notranslate nohighlight">
-\[
-\alpha|0\rangle + \beta|1\rangle \rightarrow \frac{\alpha}{\sqrt{2}}(|0\rangle + |1\rangle) +  \frac{\beta}{\sqrt{2}}(|0\rangle - |1\rangle)
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-= \frac{\alpha + \beta}{\sqrt{2}} |0\rangle + \frac{\alpha - \beta}{\sqrt{2}} |1\rangle
-\]</div>
-<p>There is another way to get this result by thinking about matrices.  The Hadamard is represented by the matrix
-<span class="math notranslate nohighlight">\(H=\frac{1}{\sqrt{2}}\left[
+\[\begin{split}H=\frac{1}{\sqrt{2}}\left[
   \begin{bmatrix}
     1 &amp; 1 \\
     1 &amp; -1
   \end{bmatrix}
-  \right]\)</span></p>
-<p>If I want the state of a wire after the Hadamard is applied to the state <span class="math notranslate nohighlight">\(\alpha|0\rangle + \beta|1\rangle\)</span> which is represented by the vector <span class="math notranslate nohighlight">\(v=[\alpha, \beta]\)</span>.  I can simply compute <span class="math notranslate nohighlight">\(Hv\)</span>.</p>
-<p>So far we’ve figured out how to deal with a gate on one wire.  Suppose a gate is on the middle of three wires.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-------</span>
-<span class="o">---</span><span class="n">H</span><span class="o">---</span>
-<span class="o">-------</span>
-</pre></div>
-</div>
-<p>Sneakily what’s happening is that the gate acts on all three wires; it just does nothing on the wires that we don’t write it on (the gate is applying the identity operator).</p>
-<p>We should describe what happens on all the binary numbers <span class="math notranslate nohighlight">\(|000\rangle, |001\rangle, ... |010\rangle ... |111\rangle\)</span>. We can think about the Hadamard applied to <span class="math notranslate nohighlight">\(|010\rangle\)</span> as <span class="math notranslate nohighlight">\(|0\rangle H|1\rangle |0\rangle\)</span> which we know is</p>
-<div class="math notranslate nohighlight">
-\[ 
-|0\rangle \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle) |0\rangle
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-=\frac{1}{\sqrt{2}}|000\rangle - |010\rangle 
-\]</div>
-<p>There is also a matrix equivalent of this.  Notice that because there are three wires, the vector representing the state is going to be length <span class="math notranslate nohighlight">\(2^3=8\)</span>.  The relevant matrix is then <span class="math notranslate nohighlight">\(I \otimes H \otimes I\)</span> where <span class="math notranslate nohighlight">\(I\)</span> is the <span class="math notranslate nohighlight">\(2\times 2\)</span> identity matrix (if the Hadamard wasn’t applied to the middle wire it would be in a difference place).</p>
-<p>The <strong>Phase(<span class="math notranslate nohighlight">\(\theta\)</span>)</strong> gate works exactly like the Hadamard does.  It’s a single gate which applies to one wire</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>----$P(\theta)$----
-</pre></div>
-</div>
+  \right]\end{split}\]</div>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>The Phase Gate (which takes an angle <span class="math notranslate nohighlight">\(\theta\)</span>): <strong>P(<span class="math notranslate nohighlight">\(\theta\)</span>)</strong></p></li>
+</ul>
+<p><img alt="" src="QC/images/p1.png" /></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{equation}
@@ -587,7 +400,7 @@ title="Fullscreen mode"
 \end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-H=\left[
+P=\left[
   \begin{bmatrix}
     1 &amp; 0 \\
     0 &amp; e^{i\theta}
@@ -595,23 +408,18 @@ H=\left[
 \right]
 \end{split}\]</div>
 <hr class="docutils" />
-<p>The <strong>CNOT</strong> gate is slightly subtle.  It spans two wires</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--.---</span>
-  <span class="o">|</span>
-<span class="o">--</span><span class="n">o</span><span class="o">---</span>
-</pre></div>
-</div>
-<p>Therefore to describe it we have to describe how it acts on four basis elements and give it a <span class="math notranslate nohighlight">\(4 \times 4\)</span> matrix.  Obviously when you pad with identities you should only include identities for the wires which it is not on.</p>
-<p>Conceptually the controlled-not is a gate which not’s the second wire when the control wire is one.
-Here we’ve described the equations/matrices when the control wire is atop the not-wire.  It is left as an exercise for the reader to describe how this changes when the control wire is lower then the not-wire.</p>
+<ul class="simple">
+<li><p>The CNOT Gate which spans two wires: CNOT</p></li>
+</ul>
+<p><img alt="" src="../_images/CNOT1.png" /></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{equation}
-|00\rangle \rightarrow |00\rangle \\\\
-|01\rangle \rightarrow |01\rangle \\\\
-|10\rangle \rightarrow |11\rangle \\\\
-|11\rangle \rightarrow |10\rangle\\\\
-\end{equation}
+\begin{eqnarray}
+|00\rangle \rightarrow |00\rangle \\
+|01\rangle \rightarrow |01\rangle \\
+|10\rangle \rightarrow |11\rangle \\
+|11\rangle \rightarrow |10\rangle
+\end{eqnarray}
 \end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -624,20 +432,17 @@ H=\left[
   \end{bmatrix}
 \right]
 \end{split}\]</div>
-</div>
 <hr class="docutils" />
-<div class="section" id="quantum-simulator-ii">
-<h2>Quantum Simulator II<a class="headerlink" href="#quantum-simulator-ii" title="Permalink to this headline">#</a></h2>
-<p>As part of this assignment, you are going to build a number of quantum computing simulators.</p>
-<p>We will start with the simplest (as well as the fastest in practice in python).</p>
-<p>In this section, you will build a simulator which takes a description of a quantum circuit and then gives an output.  The description of your quantum circuit will have a number of  gates (H, CNOT, P) and possibly a measurement at the end.</p>
-<!--
-**Input** $\xrightarrow{Quantum Circuit}$ **Quantum State** $\xrightarrow{Measurement}$ **Probabilistic Binary Output**
-$|000\rangle$ $\xrightarrow{Quantum Circuit}$  $ \sqrt{0.2} |000 \rangle + \sqrt{0.3} |101\rangle	+ \sqrt{0.5}|111\rangle$ $\xrightarrow{Measurement}$ $|101\rangle$
--->
-<p><strong>Input:</strong>  By default the input of your quantum computing simulator will be <span class="math notranslate nohighlight">\(|00..00\rangle\)</span>.  Later on you will add a feature that lets you input another state (this will be useful for debugging).
-<em>(Q: What is the vector for the state <span class="math notranslate nohighlight">\(|000\rangle\)</span>?)</em></p>
-<p><strong>Description:</strong> Here is an example of a description of your quantum circuit.</p>
+<p>This set of gates is universal.  This means that any quantum circuit which can be implemented using any gates can also be implemented using this set of gates.  (An equivalent statement is to say that any unitary matrix can be represented by a circuit made of these gates) In addition, there are no other set of (reasonable) gates which are significantly faster then this particular set of gates.  Here reasonable means any set of one or two (or fixed k) qubit gates.</p>
+<hr class="docutils" />
+</section>
+<hr class="docutils" />
+<section id="circuits">
+<h2>Circuits<a class="headerlink" href="#circuits" title="Permalink to this heading">#</a></h2>
+<p>Gates are going to be combined together into a quantum circuit.</p>
+<p>Here is an image of a quantum circuit.<br />
+<img alt="" src="../_images/circuit1.png" /></p>
+<p>A text description of that circuit can be represented in the following way:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
 <span class="n">H</span> <span class="mi">1</span>
 <span class="n">H</span> <span class="mi">2</span>
@@ -648,174 +453,22 @@ $|000\rangle$ $\xrightarrow{Quantum Circuit}$  $ \sqrt{0.2} |000 \rangle + \sqrt
 <span class="n">CNOT</span> <span class="mi">2</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<p>This block says that you have a circuit with 3 wires (the first line) with a Hadamard gate on wire 1 and 2, a phase gate with angle <span class="math notranslate nohighlight">\(\theta=0.3\)</span> radians, a CNOT gate between wires 2 and 1, then another two Hadamards and another CNOT. The fact  that the CNOT says “2 0” means that the 2 is the control wire.   Graphically it would look like this:</p>
-<p><img alt="" src="../_images/circuit1.png" /></p>
+<p>This first line says that you have a circuit with 3 wires.  The next lines tell you exactly what the circuit is doing.   There is a Hadamard gate on wire 1 and 2, a phase gate on wire 2 with angle <span class="math notranslate nohighlight">\(\theta=0.3\)</span> radians, a CNOT gate between wires 2 and 1, then another two Hadamards and another CNOT. The fact  that the CNOT says “2 0” means that the 2 is the control wire.</p>
+<div class="tip admonition">
+<p class="admonition-title">Convention</p>
+<p>There is a convention about whether wire “0” (top wire) affects the most significant bit or the least significant bit.  You should use the convention that it affects the most significant (leftmost) bit!</p>
+</div>
+<p><strong>Input:</strong>  By default the input of your quantum computing simulator will be <span class="math notranslate nohighlight">\(|00..00\rangle\)</span>.  Later on you will add a feature that lets you input another state (this will be useful for debugging). <em>(Q: What is the vector which corresponds to the state <span class="math notranslate nohighlight">\(|000\rangle\)</span>?)</em></p>
 <p>This particular circuit should output</p>
 <div class="math notranslate nohighlight">
 \[
 (0.977668244563+0.147760103331j)|000 \rangle + (0.0223317554372-0.147760103331j)|101 \rangle
 \]</div>
-<p><em>(Work this out by hand and convince yourself of that.)</em></p>
-<p>If instead our description had a measurement at the end like</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
-<span class="n">H</span> <span class="mi">1</span>
-<span class="n">H</span> <span class="mi">2</span>
-<span class="n">P</span> <span class="mi">2</span> <span class="mf">0.3</span>
-<span class="n">CNOT</span> <span class="mi">2</span> <span class="mi">1</span>
-<span class="n">H</span> <span class="mi">1</span>
-<span class="n">H</span> <span class="mi">2</span>
-<span class="n">CNOT</span> <span class="mi">2</span> <span class="mi">0</span>
-<span class="n">MEASURE</span>
-</pre></div>
-</div>
-<p>then the output is probabilistic. <span class="math notranslate nohighlight">\(97.76\%\)</span> of the time it will output the state “<span class="math notranslate nohighlight">\(|000\rangle\)</span>” and <span class="math notranslate nohighlight">\(2.23\%\)</span> of the time it will output the state <span class="math notranslate nohighlight">\(|101\rangle\)</span>.</p>
-<p>Although your quantum computing simulator will be able to run without <code class="docutils literal notranslate"><span class="pre">MEASURE</span></code> at the end, in the real world quantum computers always have a measurement at the end.</p>
-<p><strong>There is a convention about whether wire “0” (top wire) affects the most significant bit or the least significant bit.  You should use the convention that it affects the most significant (leftmost) bit!</strong></p>
-<p>Suppose I have my simulator and it’s storing my state like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myState</span><span class="o">=</span><span class="p">[</span>
-  <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">0.1</span><span class="p">),</span> <span class="s1">&#39;00&#39;</span><span class="p">),</span>
-  <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">0.4</span><span class="p">),</span> <span class="s1">&#39;01&#39;</span><span class="p">)</span> <span class="p">,</span>
-  <span class="p">(</span><span class="o">-</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span> <span class="s1">&#39;11&#39;</span> <span class="p">)</span>
-<span class="p">]</span>
-</pre></div>
-</div>
-<p>We now need to write some functions</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">CNOT</span><span class="p">(</span><span class="n">controlWire</span><span class="p">,</span><span class="n">notWire</span><span class="p">,</span><span class="n">inputState</span><span class="p">):</span>
-  <span class="c1"># do stuff</span>
-  <span class="c1"># return newState</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Phase</span><span class="p">(</span><span class="n">wire</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span><span class="n">inputState</span><span class="p">):</span>
-  <span class="c1"># do stuff</span>
-  <span class="c1"># return newState</span>
-</pre></div>
-</div>
-<p>and</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">H</span><span class="p">(</span><span class="n">wire</span><span class="p">,</span><span class="n">inputState</span><span class="p">):</span>
-  <span class="c1"># do stuff</span>
-  <span class="c1"># return newState</span>
-</pre></div>
-</div>
-<p>To accomplish this, just go ahead and loop through you old state and apply the gate to every element of your old state:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">inputState</span><span class="p">:</span>
-   <span class="n">newState</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># apply the gate to one basis element and get some new basis element(s)</span>
-   <span class="n">newState</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>For the CNOT gate, this is very easy:</p>
-<ul class="simple">
-<li><p>for every basis element, look at its current binary number.</p></li>
-<li><p>check if the binary number is 1 on the control-wire. If it is, flip the not-wire</p></li>
-<li><p>append back to newState a tuple with the same amplitude but a different binary number.</p></li>
-</ul>
-<p>The phase gate is also pretty simple.  This time instead of changing the binary number, you just need to check if the phase gate has a 1 on that wire. If it does, you need to change the amplitude by <span class="math notranslate nohighlight">\(\exp[i \theta]\)</span>.</p>
-<p>Finally, you have to deal with the Hadamard gate.  In some sense, it is the trickiest of the gates you are working with.  If the wire the Hadamard gate is being applied to is 0, you need to push back two new tuples:</p>
-<ul class="simple">
-<li><p>the first one is the same binary number with an amplitudes which is scaled by <span class="math notranslate nohighlight">\(1/\sqrt{2}\)</span></p></li>
-<li><p>the second one is the binary number which replaces the 0 with a 1 on that wire and is scaled by <span class="math notranslate nohighlight">\(1/\sqrt{2}\)</span></p></li>
-</ul>
-<p>If the wire the Hadamard is being applied to is a 1, you need to push back two new tuples:</p>
-<ul class="simple">
-<li><p>the first one is the same binary number with an amplitudes which is scaled by <span class="math notranslate nohighlight">\(1/\sqrt{2}\)</span></p></li>
-<li><p>the second one is the binary number which replaces the 0 with a 1 on that wire and is scaled by <span class="math notranslate nohighlight">\(-1/\sqrt{2}\)</span></p></li>
-</ul>
-<div class="tip admonition">
-<p class="admonition-title">Speeding up python</p>
-<p>Although we’ve described the right process as using a for-loop you could actually do better by using a list comprehension  like</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="p">[</span><span class="n">newState</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>  <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">inputState</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<p>After you do all this, don’t worry if you end up having some duplicate states (like below)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myState</span><span class="o">=</span><span class="p">[</span>
-  <span class="p">(</span><span class="o">-</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">0.125</span><span class="p">),</span> <span class="s1">&#39;11&#39;</span> <span class="p">)</span>
-  <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">0.1</span><span class="p">),</span> <span class="s1">&#39;00&#39;</span><span class="p">),</span>
-  <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">0.4</span><span class="p">),</span> <span class="s1">&#39;01&#39;</span><span class="p">)</span> <span class="p">,</span>
-  <span class="p">(</span><span class="o">-</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">0.125</span><span class="p">),</span> <span class="s1">&#39;11&#39;</span> <span class="p">)</span>
-<span class="p">]</span>
-</pre></div>
-</div>
-<p>Instead, just write some code which takes the state and adds duplicates (i.e. <code class="docutils literal notranslate"><span class="pre">myState=AddDuplicates(myState)</span></code> should give</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myState</span><span class="o">=</span><span class="p">[</span>
-  <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">0.1</span><span class="p">),</span> <span class="s1">&#39;00&#39;</span><span class="p">),</span>
-  <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">0.4</span><span class="p">),</span> <span class="s1">&#39;01&#39;</span><span class="p">)</span> <span class="p">,</span>
-  <span class="p">(</span><span class="o">-</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span> <span class="s1">&#39;11&#39;</span> <span class="p">)</span>
-<span class="p">]</span>
-</pre></div>
-</div>
-<p>Make sure you remove any term which has an amplitude zero.</p>
-<div class="tip admonition">
-<p class="admonition-title">Convention</p>
-<p>There is a convention about whether wire “0” (top wire) affects the most significant bit or the least significant bit.  You should use the convention that it affects the most significant (leftmost) bit!**</p>
-</div>
-<hr class="docutils" />
-<p>Once you have implemented these three functions, you now need to put it all together.  The next step is to configure your program to read the input from a file and then run each of the gates in hand (apply gate to current state; get new state; repeat). Parsing input is a bit annoying, so we’re happy to give you this piece. Go ahead and use the following if you want.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">ReadInput</span><span class="p">(</span><span class="n">fileName</span><span class="p">):</span>
-        <span class="n">myInput_lines</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-        <span class="n">myInput</span><span class="o">=</span><span class="p">[]</span>
-        <span class="n">numberOfWires</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">myInput_lines</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">myInput_lines</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
-            <span class="n">myInput</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">numberOfWires</span><span class="p">,</span><span class="n">myInput</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Then you can read the gate by doing</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">myInput</span><span class="o">=</span><span class="n">ReadInput</span><span class="p">(</span><span class="s2">&quot;myGateDescription&quot;</span><span class="p">)</span>
-    <span class="n">firstGate</span><span class="o">=</span><span class="n">myInput</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">secondGate</span><span class="o">=</span><span class="n">myInput</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">firstWire</span><span class="o">=</span><span class="n">myInput</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>At this point you should be able to take a circuit description (without measurement) and print out the quantum state of the system at the end.  You should be using your pretty print functions to print this out in a nice way using Dirac notation.</p>
-<div class="tip admonition">
-<p class="admonition-title">Example input file</p>
-<p>You can find an example input file for testing here: <a class="reference download internal" download="" href="../_downloads/1e5b65ac86860af5366ffde756a0d863/example.circuit"><code class="xref download docutils literal notranslate"><span class="pre">example.circuit</span></code></a>. Note that this file includes a state initialization directive <code class="docutils literal notranslate"><span class="pre">INITSTATE</span></code> which is discussed below.</p>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="measuring">
-<h2>Measuring<a class="headerlink" href="#measuring" title="Permalink to this headline">#</a></h2>
-<p>Your next step should be to get measurement working.   When you measure at the end your code should output binary number <span class="math notranslate nohighlight">\(|i\rangle\)</span> with probability <span class="math notranslate nohighlight">\(|\langle i | \Psi_\textrm{out}\rangle|^2\)</span>.  Modify your simulator so that it can correctly produce the result with measurement. The easiest way to do this is to create a list of probabilities (the absolute value squared and binary numbers and then use <code class="docutils literal notranslate"><span class="pre">np.choice</span></code>).</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="input">
-<h2>Input<a class="headerlink" href="#input" title="Permalink to this headline">#</a></h2>
-<p>By default we will assume that the input to your quantum circuit is the state <span class="math notranslate nohighlight">\(|00..0\rangle\)</span>.  Often (especially for testing purposes) you’ll want to be able to put in another input though.  To do this, we will use a line like</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INITSTATE</span> <span class="n">FILE</span> <span class="n">myInputState</span><span class="o">.</span><span class="n">txt</span>
-</pre></div>
-</div>
-<p>where <code class="docutils literal notranslate"><span class="pre">myInputState.txt</span></code> will be a file with <span class="math notranslate nohighlight">\(2^n\)</span> complex numbers in it like such:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.0</span> <span class="o">-</span><span class="mf">0.0</span>
-<span class="mf">0.0</span> <span class="o">-</span><span class="mf">0.0</span>
-<span class="mf">0.0</span> <span class="o">-</span><span class="mf">0.0</span>
-<span class="mf">0.0</span> <span class="o">-</span><span class="mf">0.7071</span>
-<span class="mf">0.0</span> <span class="o">-</span><span class="mf">0.0</span>
-<span class="mf">0.0</span> <span class="o">-</span><span class="mf">0.0</span>
-<span class="mf">0.7071</span> <span class="mf">0.0</span>
-<span class="mf">0.0</span> <span class="o">-</span><span class="mf">0.0</span>
-</pre></div>
-</div>
-<p>for the state <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{2}} \left( -i |3\rangle + |6 \rangle\right)\)</span></p>
-<p>Also, you should be able to read inputs like</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INITSTATE</span> <span class="n">BASIS</span> <span class="o">|</span><span class="mi">001</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>Congrats! At this point you should have a basic working simulator.</p>
-<div class="caution admonition">
-<p class="admonition-title">Grading</p>
-<p>Hopefully at this point you’ve tested your simulator and are convinced that it works.  To grade your simulator, we will run it on a number of inputs below.  You should paste your results to these outputs into your document.  One of our inputs has a <code class="docutils literal notranslate"><span class="pre">MEASURE</span></code> at the end.  For this input you should produce a graph which is a histogram of output versus counts.</p>
-<p><strong>Tests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference download internal" download="" href="../_downloads/bb7b78cb4db89d7812c87400d9544d5f/rand.circuit"><code class="xref download docutils literal notranslate"><span class="pre">rand.circuit</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="../_downloads/fdb26c793b55bb40fb4885745306ec20/measure.circuit"><code class="xref download docutils literal notranslate"><span class="pre">measure.circuit</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="../_downloads/207ff8c4ac4cb1f764bef3b46c8ba8e0/input.circuit"><code class="xref download docutils literal notranslate"><span class="pre">input.circuit</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="../_downloads/083f826f05148adcc2d1ae5a7752dd4a/myInputState.txt"><code class="xref download docutils literal notranslate"><span class="pre">myInputState.txt</span></code></a></p></li>
-</ul>
-</div>
-</div>
+<p>Our goal now will be to write simulator(s) which take input states to output states.  Later on, we will incorporate some additional tools to our simulators including <strong>measurement</strong> and <strong>arbitrary input</strong>.</p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -829,7 +482,7 @@ $|000\rangle$ $\xrightarrow{Quantum Circuit}$  $ \sqrt{0.2} |000 \rangle + \sqrt
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./QC"
         },
         predefinedOutput: true
@@ -837,50 +490,104 @@ $|000\rangle$ $\xrightarrow{Quantum Circuit}$  $ \sqrt{0.2} |000 \rangle + \sqrt
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="0-DiracNotation.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Dirac Notation</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="1b-QuantumComputingSimulator.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">QC Simulator I(abcd)</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Bryan Clark<br/>
-  
-      &copy; Copyright 2023.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
 
-
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="0-DiracNotation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Dirac Notation</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="SimulatorS.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Simulator S</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gates">Gates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuits">Circuits</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Bryan Clark
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

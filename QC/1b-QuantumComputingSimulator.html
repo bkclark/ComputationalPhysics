@@ -1,44 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QC Simulator I(abcd) &#8212; Computing in Physics (Phy446)</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>Simulator M-(abcd) &#8212; Computing in Physics (Phy446)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -48,487 +64,313 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'QC/1b-QuantumComputingSimulator';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Non-atomic gates" href="NonAtomicGates.html" />
-    <link rel="prev" title="QC Simulator II" href="1a-QuantumComputingSimulator.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="Measuring and Input" href="Measuring.html" />
+    <link rel="prev" title="Simulator S" href="SimulatorS.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Computing in Physics (Phy446)</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Setting up
- </span>
-</p>
+  
+
+<a class="navbar-brand logo" href="../Overview.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computing in Physics (Phy446)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setting up</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../GettingStarted.html">
-   Getting Setup
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted.html">Getting Setup</a></li>
+
+
+
+
+
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Cellular Automata
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cellular Automata</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/CellularAutomata.html">
-   Cellular Automata
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/Sand.html">
-   Sand
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/OtherAutomata.html">
-   Other Interesting Automata
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/CellularAutomata.html">Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/Sand.html">Sand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/OtherAutomata.html">Other Interesting Automata</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Quantum Computing
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Computing</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="0-DiracNotation.html">
-   Dirac Notation
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="1a-QuantumComputingSimulator.html">
-   QC Simulator II
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     QC Simulator I(abcd)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="NonAtomicGates.html">
-   Non-atomic gates
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="PhaseEstimation.html">
-   Phase estimation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="QFT.html">
-   Quantum Fourier Transform
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Shor-Overview.html">
-   Shor’s Algorithm
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Shor-Classical.html">
-     Shor’s Algorithm (classically)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Shor-Quantum.html">
-     Quantum Matrix
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ModularMultiplication.html">
-     Modular Multiplication
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Shor-QuantumCircuit.html">
-     Shor’s Algorithm
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0-DiracNotation.html">Dirac Notation</a></li>
+
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="1a-QuantumComputingSimulator.html">QC Simulators</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="SimulatorS.html">Simulator S</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Simulator M-(abcd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Measuring.html">Measuring and Input</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Quantum Computing (extensions)
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Gates.html">
-   Gates
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ClassicalGates.html">
-     Classical Gates
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ControlledGates.html">
-     Controlled Gates
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Universal.html">
-     Gates for any Unitary
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="BQPinPSPACE.html">
-   BQP in PSPACE
-  </a>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NonAtomicGates.html">Non-atomic gates</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="PhaseEstimation.html">Phase estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QFT.html">Quantum Fourier Transform</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Shor-Overview.html">Shor’s Algorithm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Shor-Classical.html">Shor’s Algorithm (classically)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shor-Quantum.html">Quantum Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModularMultiplication.html">Modular Multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shor-QuantumCircuit.html">Shor’s Algorithm</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ising Model
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/IsingModel.html">
-   Simulating an Ising Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/Measure.html">
-   Measuring the Ising Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/RG.html">
-   The Renormalization Group
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/ParallelTempering.html">
-   Extra Credit: Parallel Tempering
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/SimulatedAnnealing.html">
-   Extra Credit: Simulated Annealing
-  </a>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Machine Learning
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Computing (extensions)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/Hopfield.html">
-   Hopfield Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/RBM.html">
-   Restricted Boltzmann Machines
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/Diffusion.html">
-   Generative Diffusion Models
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Gates.html">Gates</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ClassicalGates.html">Classical Gates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ControlledGates.html">Controlled Gates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Universal.html">Gates for any Unitary</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Topological Insulators
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BQPinPSPACE.html">BQP in PSPACE</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ising Model</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/Lattice.html">
-   Lattices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/TightBinding.html">
-   Tight Binding Models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/ChernInsulators.html">
-   Topological Insulators
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/IsingModel.html">Simulating an Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/Measure.html">Measuring the Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/RG.html">The Renormalization Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/ParallelTempering.html">Extra Credit: Parallel Tempering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/SimulatedAnnealing.html">Extra Credit: Simulated Annealing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ML/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ML/Hopfield.html">Hopfield Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ML/RBM.html">Restricted Boltzmann Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ML/Diffusion.html">Generative Diffusion Models</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topological Insulators</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../TI/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/Lattice.html">Lattices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/TightBinding.html">Tight Binding Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/ChernInsulators.html">Topological Insulators</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
 
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#constructing-the-unitary-matrix-for-the-quantum-circuit">
-   Constructing the unitary matrix for the quantum circuit.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#computational-complexity">
-   Computational Complexity
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#simulator-ib">
-   Simulator Ib
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#simulator-ic">
-   Simulator Ic
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#simulator-id">
-   Simulator Id
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>QC Simulator I(abcd)</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#constructing-the-unitary-matrix-for-the-quantum-circuit">
-   Constructing the unitary matrix for the quantum circuit.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#computational-complexity">
-   Computational Complexity
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#simulator-ib">
-   Simulator Ib
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#simulator-ic">
-   Simulator Ic
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#simulator-id">
-   Simulator Id
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Simulator M-(abcd)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
-                
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="qc-simulator-i-abcd">
-<h1>QC Simulator I(abcd)<a class="headerlink" href="#qc-simulator-i-abcd" title="Permalink to this headline">#</a></h1>
-<p>In this section, we are going to write some additional quantum computing simulators.  These are conceptually useful but aren’t as quick.  Instead of approaching quatnum computing as a map between binary numbers they instead think of everything in terms of matrices.</p>
-<div class="section" id="constructing-the-unitary-matrix-for-the-quantum-circuit">
-<h2>Constructing the unitary matrix for the quantum circuit.<a class="headerlink" href="#constructing-the-unitary-matrix-for-the-quantum-circuit" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>A general circuit can be represented by a unitary matrix <span class="math notranslate nohighlight">\(U_\textrm{circuit}.\)</span> From a description of the circuit, build this matrix.  Then:</p>
-<ul>
-<li><p>Generate the vector for the input <span class="math notranslate nohighlight">\(|\Psi_\textrm{in}\rangle = |00..0\rangle\)</span> (<em>n zeros</em>). This is a quantum state and quantum states are represented in your program by a <span class="math notranslate nohighlight">\(2^n\)</span> size vector where <span class="math notranslate nohighlight">\(n\)</span> is the number of wires.</p></li>
-<li><p>Multiply the vector <span class="math notranslate nohighlight">\(|\Psi_\textrm{in}\rangle\)</span> by  <span class="math notranslate nohighlight">\(U_\textrm{circuit}\)</span>.  This gives you the output quantum state <span class="math notranslate nohighlight">\(|\Psi_\textrm{out}\rangle\)</span></p></li>
-<li><p>Measure the final quantum state <span class="math notranslate nohighlight">\(|\Psi_\textrm{out}\rangle.\)</span> This is done by  returning the binary number <span class="math notranslate nohighlight">\(\langle ij..k |\)</span> with probability <span class="math notranslate nohighlight">\(|\langle ij..k |\Psi_\textrm{out}\rangle|^2\)</span>. (<em>Figure out what this means in terms of your vector</em>)</p></li>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulator-m-a">Simulator M-a</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hadamard-gate">Hadamard Gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-gate">Phase Gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cnot-gate">CNOT Gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-gates">Combining Gates</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-complexity">Computational Complexity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulator-m-b">Simulator M-b</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulator-m-c-extra-credit">Simulator M-c (Extra-Credit)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulator-m-d-extra-credit">Simulator M-d (Extra-Credit)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-of-computational-complexity">Graph of Computational Complexity</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="simulator-m-abcd">
+<h1>Simulator M-(abcd)<a class="headerlink" href="#simulator-m-abcd" title="Permalink to this heading">#</a></h1>
+<p>In this section, we are going to write another (set of) quantum computing simulator(s). This simulator is conceptually different then the others.   Instead of approaching quatnum computing as a map between binary numbers we instead will think of everything in terms of matrices.</p>
+<section id="simulator-m-a">
+<h2>Simulator M-a<a class="headerlink" href="#simulator-m-a" title="Permalink to this heading">#</a></h2>
+<p>A general circuit (or gate or set of gates) can be represented by a unitary matrix <span class="math notranslate nohighlight">\(U_\textrm{circuit}\)</span>.</p>
+<p>Our goal for simulator M-a will be to take a description of a circuit and build this matrix.  Then we can multiply this matrix against the initial input state to get an output state - i.e.</p>
+<ul class="simple">
+<li><p>Generate the vector for the input <span class="math notranslate nohighlight">\(|\Psi_\textrm{in}\rangle = |00..0\rangle\)</span> (<em>n zeros</em>). This is a quantum state and quantum states are represented in your program by a <span class="math notranslate nohighlight">\(2^n\)</span> size vector where <span class="math notranslate nohighlight">\(n\)</span> is the number of wires.</p></li>
+<li><p>Multiply the vector <span class="math notranslate nohighlight">\(|\Psi_\textrm{in}\rangle\)</span> by  <span class="math notranslate nohighlight">\(U_\textrm{circuit}\)</span>.  This gives you the output quantum state <span class="math notranslate nohighlight">\(|\Psi_\textrm{out}\rangle\)</span></p></li>
 </ul>
 <p>To make matrix representations of <span class="math notranslate nohighlight">\(n\)</span>-wire circuits, you first need to understand how to make matrix representations of the circuit components which act on 1 or 2 wires.</p>
-<p>Let’s start by thinking about the Hadamard gate. I want to accomplish this:</p>
-<p>![What is the output of a Hadamard gate when fed the state on the left?]
-<img alt="" src="../_images/H1.png" /></p>
-<p>The input state is <span class="math notranslate nohighlight">\(\sqrt{0.3}|0\rangle + \sqrt{0.7}|1\rangle\)</span>. First, figure out how to represent this state as a vector.  Then figure out what the output vector should be after its application.</p>
-<p>As a next step, figure out how to build the unitary matrix for this quantum circuit:</p>
+<section id="hadamard-gate">
+<h3>Hadamard Gate<a class="headerlink" href="#hadamard-gate" title="Permalink to this heading">#</a></h3>
+<p>Let’s start by thinking about the Hadamard gate on a single wire.</p>
+<p><img alt="" src="../_images/H1.png" /></p>
+<p>The state on this wire is a <span class="math notranslate nohighlight">\(2\times 1\)</span> vector and the matrix which represents this gate is a unitary matrix which is <span class="math notranslate nohighlight">\(2 \times 2\)</span>.</p>
+<p>Recall that the Hadamard gate should take a state <span class="math notranslate nohighlight">\(|0\rangle\)</span>, which is represented by a column vector <span class="math notranslate nohighlight">\([1,0]\)</span> to a state  <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)\)</span>, which is represented by a column vector <span class="math notranslate nohighlight">\([1/\sqrt{2},1/\sqrt{2}]\)</span>.  This fixes the top row of the unitary matrix for the Hadamard.   <strong>Figure out what those values must be.</strong>  Using the same logic and what you know about the way in which the Hadamard gate acts on <span class="math notranslate nohighlight">\(|1\rangle\)</span>, represented by the column vector <span class="math notranslate nohighlight">\([0,1]\)</span>, go ahead and figure out what the bottom row of the Hadamard must be.   If you are having trouble with this, look back at the reference earlier in the assignment.  At this point, we know have the matrix for a single Hadamard.</p>
+<p>As a next step, we need to figure out how to build the unitary matrix for this quantum circuit:</p>
 <p><img alt="" src="../_images/H3.png" /></p>
-<p>Notice that this is the same input state (<em>do you understand why?)</em>, though now it is represented by a <span class="math notranslate nohighlight">\(2^3\)</span> size vector. (<em>What is the</em> <span class="math notranslate nohighlight">\(2^3\)</span> <em>size vector for this state?).</em> The unitary matrix representing this quantum circuit is <span class="math notranslate nohighlight">\(2^3 \times 2^3\)</span> even though the Hadamard gate applies only to the first wire. A trick for constructing the larger representation is to build the matrix <span class="math notranslate nohighlight">\(I \otimes H \otimes I\)</span>,  where <span class="math notranslate nohighlight">\(H\)</span> is the matrix for the Hadamard gate, <span class="math notranslate nohighlight">\(I\)</span> is an identity matrix, and <span class="math notranslate nohighlight">\(\otimes\)</span> denotes a tensor product. Write code that constructs the matrix representing a Hadamard applied to wire <span class="math notranslate nohighlight">\(i\)</span> in a <span class="math notranslate nohighlight">\(k\)</span>-wire circuit (in this case <span class="math notranslate nohighlight">\(k=3\)</span>). Working in python, you might define a function that looks something like this</p>
+<p>This unitary matrix should be represented as a <span class="math notranslate nohighlight">\(2^3 \times 2^3\)</span> size matrix even though the Hadamard gate applies only to the first wire.  A trick for constructing the larger representation is to build the matrix <span class="math notranslate nohighlight">\(I \otimes H \otimes I\)</span>,  where <span class="math notranslate nohighlight">\(H\)</span> is the matrix for the Hadamard gate, <span class="math notranslate nohighlight">\(I\)</span> is an identity matrix, and <span class="math notranslate nohighlight">\(\otimes\)</span> denotes a tensor product. Write code that constructs the matrix representing a Hadamard applied to wire <span class="math notranslate nohighlight">\(i\)</span> in a <span class="math notranslate nohighlight">\(k\)</span>-wire circuit (in this case <span class="math notranslate nohighlight">\(k=3\)</span>). Working in python, you might define a function that looks something like this</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">HadamardArray</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
       <span class="c1"># this should apply Hadamard to wire i out of k wires</span>
       <span class="n">size</span><span class="o">=...</span>
@@ -538,30 +380,45 @@ title="Fullscreen mode"
 </pre></div>
 </div>
 <p><em>Python hint:  <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&#64;</span> <span class="pre">b</span></code> multiplies two matrices (or numpy arrays)</em></p>
-<p>Repeat this exercise for the phase gate (note, to construct the array your function will need the phase angle as an argument). Begin by figuring out the correct matrix for the phase gate on one wire.</p>
-<p>I found it useful to build a function <code class="docutils literal notranslate"><span class="pre">tensorMe(listOfMatrices)</span></code> which takes a list of matrices and generates their tensor product.</p>
-<p><strong>The CNOT gate:</strong>  The next step in building our simulator is to construct matrix representations for gates that act on multiple wires. The controlled-not gate, CNOT, is non-trivial because it is applied to two wires at once.</p>
+<div class="tip admonition">
+<p class="admonition-title">Simplification</p>
+<p>In order to deal with multiple wires, I found it useful to build a function <code class="docutils literal notranslate"><span class="pre">tensorMe(listOfMatrices)</span></code> which takes a list of matrices and generates their tensor product.  Then if you are working on the second wire, you could send it a list with the relevant gate second in the list and identities elsewhere.</p>
+</div>
+</section>
+<section id="phase-gate">
+<h3>Phase Gate<a class="headerlink" href="#phase-gate" title="Permalink to this heading">#</a></h3>
+<p>Repeat this exercise for the phase gate (note, to construct the array your function will need the phase angle as an argument). As a hint, this matrix is going to only have non-zero values on the diagonal of the matrix.   If you are having trouble figuring out the matrix, go ahead and look at the reference information on the Simulator page.</p>
+<p>Again, to do multiple wires you need to pad it with the identity.</p>
+</section>
+<section id="cnot-gate">
+<h3>CNOT Gate<a class="headerlink" href="#cnot-gate" title="Permalink to this heading">#</a></h3>
+<p>The next step in building our simulator is to construct matrix representations for gates that act on multiple wires. The controlled-not gate, CNOT, is non-trivial because it is applied to two wires at once.</p>
 <p><img alt="" src="../_images/CNOT1.png" /></p>
-<p>We have told you what the right matrix to use for a right-side up CNOT.  Figure out the right matrix to multiply your state for an upside-down CNOT on the left of the gate <span class="math notranslate nohighlight">\(|\Psi_\textrm{left}\rangle\)</span> by to get the state on the right of the gate <span class="math notranslate nohighlight">\(|\Psi_\textrm{right}\rangle\)</span>.</p>
-<p>Now, let’s figure out how to do it when the CNOT gate is in the middle of four wires, like below.</p>
+<p>The gate for CNOT is going to be of size <span class="math notranslate nohighlight">\(4 \times 4\)</span> because it works on two qubits at once.</p>
+<p>We will need two separate matrices: one for the right-side up matrix and one for the upside-down matrix.</p>
+<p>Using what you know about the rules for CNOT, generate both of these matrices.  Each row of the matrix should have only one non-zero element (and it should be 1).</p>
+<p>Now, we need to figure out how to do it when the CNOT gate is in the middle of four wires, like below.</p>
 <p><img alt="" src="../_images/CNOT4.png" /></p>
-<p>Remember, you are going to use identities to tensor against this.  You will want to write a function like</p>
+<p>Just like in the previous case, you need to tensor identities for the wires that don’t have gates on them.  You will want to write a function like</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">CNOTArray</span><span class="p">(</span><span class="n">controlWire</span><span class="p">,</span><span class="n">otherWire</span><span class="p">,</span><span class="n">totalWires</span><span class="p">):</span>
       <span class="n">myMatrix</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span><span class="n">size</span><span class="p">))</span>
       <span class="c1">#do stuff</span>
      <span class="k">return</span> <span class="n">myMatrix</span>
 </pre></div>
 </div>
-<p>Test your function after you’ve written it. You can make some input state and verify that it produces the correct output state, like below.</p>
+<p>Test your function after you’ve written it. You can make some input state and verify that it produces the correct output state, like below.  Recall that myInputState should be a vector.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">myInputState</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#some state of 4 wires</span>
-    <span class="n">myOutputState</span> <span class="o">=</span> <span class="n">CNOTArray</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span> <span class="n">myInputState</span>
+    <span class="n">myOutputState</span> <span class="o">=</span> <span class="n">CNOTArray</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="nd">@myInputState</span>
 </pre></div>
 </div>
 <p>Make sure to check your results by hand.</p>
 <p><strong>A challenge:</strong>  We’ve figured out how to construct CNOT gates that apply to neighboring wires. But what happens if the controlled bit is further away from the controlling bit (say between wires 1 and 3), like such:</p>
 <p><img alt="" src="../_images/CNOTspan.png" /></p>
-<p>Can you figure out how to write the matrix for this gate? This is much harder then the other things you’ve done. If you can get it to work, that’s great. If not, don’t worry about it. We’ll see in a couple minutes how to do it.</p>
-<p><strong>Putting the gates together:</strong> You’ve figured out how to make matrix representations for various gates. Now suppose we want to compose multiple gates into a more complete circuit. For example, suppose you have the following input</p>
+<p>Can you figure out how to write the matrix for this gate? This is much harder then the other things you’ve done. If you can get it to work, that’s great. If not, don’t worry about it. We’ll see how to use short range gates to generate long range gates.</p>
+</section>
+<section id="combining-gates">
+<h3>Combining Gates<a class="headerlink" href="#combining-gates" title="Permalink to this heading">#</a></h3>
+<p>You’ve figured out how to make matrix representations for various gates. Now suppose we want to compose multiple gates into a more complete circuit. For example, suppose you have the following input</p>
 <div class="highlight-{.python notranslate"><div class="highlight"><pre><span></span>    3
     H 1
     CNOT 1 2
@@ -571,27 +428,37 @@ title="Fullscreen mode"
 <p>It consists of three gates applied sequentially. You know how to build the matrix for each of these individual gates (in the dotted boxes).
 <img alt="" src="../_images/firstCircuit.png" /></p>
 <p>Let’s now proceed with building the unitary matrix which represents this circuit. Be careful about the order in which you apply your matrices; remember that the input travels from left to right.</p>
-<p>At this point, you (personally) should be able to take a circuit description and produce the unitary circuit which represents it.  Go ahead and run this simulator on the same tests as Simulator II</p>
-</div>
+<p>At this point, you (personally) should be able to take a circuit description and produce the unitary circuit which represents it.</p>
 <hr class="docutils" />
-<div class="section" id="computational-complexity">
-<h2>Computational Complexity<a class="headerlink" href="#computational-complexity" title="Permalink to this headline">#</a></h2>
+<div class="caution admonition">
+<p class="admonition-title">Grading</p>
+<p>Implement simulator M-a.  Go ahead and run this simulator on the same tests as Simulator S</p>
+</div>
+</section>
+</section>
+<section id="computational-complexity">
+<h2>Computational Complexity<a class="headerlink" href="#computational-complexity" title="Permalink to this heading">#</a></h2>
 <p>One of the reoccuring themes in this course will be using efficient algorithms.  Let’s think about the efficiency of our simulation.  There are two things we might consider: the <em>time complexity</em> and the <em>space complexity</em>.    Let <span class="math notranslate nohighlight">\(g\)</span> be the number of gates and <span class="math notranslate nohighlight">\(2^w=N\)</span> be the size of the Hilbert space. You needed to make <span class="math notranslate nohighlight">\(g\)</span> matrices with <span class="math notranslate nohighlight">\(N^2\)</span> numbers in them.  Therefore, the amount of space that you took up was something like <span class="math notranslate nohighlight">\(gN^2\)</span> (depending on how you implemented things it might even be just <span class="math notranslate nohighlight">\(O(N^2)\)</span> RAM).   In terms of your complexity, you needed to multiply a bunch of <span class="math notranslate nohighlight">\(N \times N \)</span> matrices.  Each such multiplication takes <span class="math notranslate nohighlight">\(O(N^3)\)</span> work.  So you needed to do something like <span class="math notranslate nohighlight">\(gN^3\)</span> work.</p>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="simulator-ib">
-<h2>Simulator Ib<a class="headerlink" href="#simulator-ib" title="Permalink to this headline">#</a></h2>
+<section id="simulator-m-b">
+<h2>Simulator M-b<a class="headerlink" href="#simulator-m-b" title="Permalink to this heading">#</a></h2>
 <p><strong>Note: You are going to improve your algorithm here. Don’t erase your old version because although it is slower it gives you more information that you will sometimes find useful</strong>.</p>
 <p>Let’s go ahead and make some minor changes that will improve the efficiency of the algorithm.</p>
-<p>We can significantly decrease the amount of work if we build the matrix for the first circuit element and then multiply  by the current state to produce the output state. Then you can build the matrix for the next gate and multiply it against the current state.   Go ahead and do this.  Now, applying each gate involves a matrix-vector multiplication. That takes <span class="math notranslate nohighlight">\(O(N^2)\)</span> time each for a total time of <span class="math notranslate nohighlight">\(O(gN^2)\)</span>.  You stil need <span class="math notranslate nohighlight">\(O(N^2)\)</span> RAM.</p>
+<p>We can significantly decrease the amount of work if we build the matrix for the first circuit element and then multiply  by the current state to produce the output state. Then you can build the matrix for the next gate and multiply it against the current state.   Go ahead and do this.  Now, applying each gate involves a matrix-vector multiplication. That takes <span class="math notranslate nohighlight">\(O(N^2)\)</span> time each for a total time of <span class="math notranslate nohighlight">\(O(gN^2)\)</span>.  You still need <span class="math notranslate nohighlight">\(O(N^2)\)</span> RAM.</p>
 <div class="caution admonition">
 <p class="admonition-title">Grading</p>
 <p>Do the same tests as above on your faster simulator and paste them into your document.</p>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="simulator-ic">
-<h2>Simulator Ic<a class="headerlink" href="#simulator-ic" title="Permalink to this headline">#</a></h2>
+<section id="simulator-m-c-extra-credit">
+<h2>Simulator M-c (Extra-Credit)<a class="headerlink" href="#simulator-m-c-extra-credit" title="Permalink to this heading">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Extra Credit</p>
+<p><strong>10 points extra credit</strong></p>
+<p>This section (Simulator M-c) is extra credit (but there is additional non-extra credit later in this page).</p>
+</div>
 <p>Once you have this implemented, let’s make another improvement. Currently, you are building big matrices for each gate.  <em>Q: How many non-zero elements does your matrix actually have?</em>  What you will find is that it should only have <span class="math notranslate nohighlight">\(O(N)\)</span> non-zeros.  This suggests that we should store the matrices in a sparse way.  Build up your matrix, then using sparse matrices.  You might want to use <code class="docutils literal notranslate"><span class="pre">scipy.sparse.kron</span></code> for doing this.  Allow the vector to be dense but do the matrix-vector product using sparse matrices.  The total RAM you are using is now <span class="math notranslate nohighlight">\(O(N)\)</span>.  Also, each matrix-vector multiplication, only involves <span class="math notranslate nohighlight">\(O(N)\)</span> work.  This is much better.</p>
 <p>You want to make everything sparse and keep it sparse.  The trick is to use <code class="docutils literal notranslate"><span class="pre">scipy.sparse</span></code> to keep everything in csr format.
 I used commands like (<em>not in this order</em>)</p>
@@ -605,17 +472,14 @@ I used commands like (<em>not in this order</em>)</p>
 <hr class="docutils" />
 <div class="caution admonition">
 <p class="admonition-title">Grading</p>
-<p>Do the same tests as above to verify your simulator works.</p>
-<p>You should measure the time that both simulators takes as a function of number of qubits.  Generate random circuits of a fixed length with more and more qubits and see how long things take by running <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">python</span> <span class="pre">mySimulator.py</span> <span class="pre">myInput</span></code>.</p>
-<p>Make a plot of the result like below and add it to your document.  Do the same thing with the RAM (use top or activity monitor to view the ram usage.  You just need to get an approximation).  Here we show the results for simulators I(abc)</p>
-<p><img alt="" src="../_images/SimulatorTime.png" /></p>
+<p>Do the same tests as above to verify your simulator works. Verify it is actually sparse by showing that the RAM being used is much smaller.</p>
 </div>
-</div>
-<div class="section" id="simulator-id">
-<h2>Simulator Id<a class="headerlink" href="#simulator-id" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="simulator-m-d-extra-credit">
+<h2>Simulator M-d (Extra-Credit)<a class="headerlink" href="#simulator-m-d-extra-credit" title="Permalink to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Extra Credit (5 points)</p>
-<p>Simulator 1d is extra credit.  This is actually the simulator you would probably write to be most efficient in C++.  In python, it seems to generally be slower (everything here is mainly about constants and not about actual computational complexity).  There is better extra credit to do so I wouldn’t do this part unless this especially interests you.</p>
+<p>Simulator 1d is also extra credit.  This is actually the simulator you would probably write to be most efficient in C++.  In python, it seems to generally be slower (everything here is mainly about constants and not about actual computational complexity).  There is better extra credit to do so I wouldn’t do this part unless this especially interests you.</p>
 </div>
 <p>In this simulator, we want to simply write functions that apply the Hadamard gate taking as input a vector and giving output another vector.  At no point do we want to build the whole matrix for the Hadamard gate though (sparse or otherwise).  This is very similar to Simulator II but instead of going from state -&gt; state we go from vector -&gt; vector.  In a normal language (i.e. C++) this would be faster then the other simulators but I find in python it’s generically slower.</p>
 <p>Write</p>
@@ -646,11 +510,27 @@ I used commands like (<em>not in this order</em>)</p>
 <p>Once again, go ahead and test your quantum simulator in various ways.  You should verify that it works.</p>
 <div class="caution admonition">
 <p class="admonition-title">Grading</p>
-<p>Show that the new simulator works using the same suite of test.  It should use the least RAM of all your methods.</p>
-<p>Go ahead and add this data to your graphs above.</p>
+<p>Show that the new simulator works using the same suite of tests|.</p>
 </div>
+<hr class="docutils" />
+</section>
+<hr class="docutils" />
+<section id="graph-of-computational-complexity">
+<h2>Graph of Computational Complexity<a class="headerlink" href="#graph-of-computational-complexity" title="Permalink to this heading">#</a></h2>
+<p><strong>This part is required and need to be done.  It is not extra credit</strong></p>
+<p>So far you’ve built (at least) three quantum computing simulators: Simulator S, Simulator M-a, and Simulator M-b.</p>
+<p>Each of these three simulators have different computational complexity.</p>
+<p>You should measure the time that all the simulators you’ve implemented take as a function of number of qubits.  Generate random circuits of a fixed length with more and more qubits and see how long things take by running <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">python</span> <span class="pre">mySimulator.py</span> <span class="pre">myInput</span></code>.</p>
+<div class="caution admonition">
+<p class="admonition-title">Grading</p>
+<p>Make a plot of the result like below and add it to your document.</p>
+<p>Here we show some results.  Your results should be qualitatively similar but may differ in some ways.</p>
+<p><img alt="" src="../_images/SimulatorTime.png" /></p>
 </div>
-</div>
+<p>One should be a bit careful in interpreting these results.  When you are running out to only a fixed gate depth, you don’t span the full Hilbert space. If one were to do this very carefully, one should look at the cost as a function of both number of qubits and gate depth.  This is not required here.</p>
+<p>It is interesting (but not required) to do the same thing with the RAM (use top or activity monitor to view the ram usage - I’m not sure how to do this with google colab).   You just need to get an approximation.</p>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -664,7 +544,7 @@ I used commands like (<em>not in this order</em>)</p>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./QC"
         },
         predefinedOutput: true
@@ -672,50 +552,113 @@ I used commands like (<em>not in this order</em>)</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="1a-QuantumComputingSimulator.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">QC Simulator II</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="NonAtomicGates.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Non-atomic gates</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Bryan Clark<br/>
-  
-      &copy; Copyright 2023.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
 
-
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="SimulatorS.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Simulator S</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Measuring.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Measuring and Input</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulator-m-a">Simulator M-a</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hadamard-gate">Hadamard Gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-gate">Phase Gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cnot-gate">CNOT Gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-gates">Combining Gates</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-complexity">Computational Complexity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulator-m-b">Simulator M-b</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulator-m-c-extra-credit">Simulator M-c (Extra-Credit)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulator-m-d-extra-credit">Simulator M-d (Extra-Credit)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-of-computational-complexity">Graph of Computational Complexity</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Bryan Clark
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

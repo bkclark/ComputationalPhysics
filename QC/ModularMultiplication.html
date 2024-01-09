@@ -1,44 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modular Multiplication &#8212; Computing in Physics (Phy446)</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>Modular Multiplication &#8212; Computing in Physics (Phy446)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -48,513 +64,293 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'QC/ModularMultiplication';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Shor’s Algorithm" href="Shor-QuantumCircuit.html" />
     <link rel="prev" title="Quantum Matrix" href="Shor-Quantum.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Computing in Physics (Phy446)</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Setting up
- </span>
-</p>
+  
+
+<a class="navbar-brand logo" href="../Overview.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computing in Physics (Phy446)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setting up</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../GettingStarted.html">
-   Getting Setup
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted.html">Getting Setup</a></li>
+
+
+
+
+
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Cellular Automata
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cellular Automata</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/CellularAutomata.html">
-   Cellular Automata
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/Sand.html">
-   Sand
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../CellularAutomata/OtherAutomata.html">
-   Other Interesting Automata
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/CellularAutomata.html">Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/Sand.html">Sand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CellularAutomata/OtherAutomata.html">Other Interesting Automata</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Quantum Computing
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Computing</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="0-DiracNotation.html">
-   Dirac Notation
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="1a-QuantumComputingSimulator.html">
-   QC Simulator II
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1b-QuantumComputingSimulator.html">
-     QC Simulator I(abcd)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="NonAtomicGates.html">
-   Non-atomic gates
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="PhaseEstimation.html">
-   Phase estimation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="QFT.html">
-   Quantum Fourier Transform
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="Shor-Overview.html">
-   Shor’s Algorithm
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="Shor-Classical.html">
-     Shor’s Algorithm (classically)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Shor-Quantum.html">
-     Quantum Matrix
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Modular Multiplication
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Shor-QuantumCircuit.html">
-     Shor’s Algorithm
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0-DiracNotation.html">Dirac Notation</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="1a-QuantumComputingSimulator.html">QC Simulators</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="SimulatorS.html">Simulator S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1b-QuantumComputingSimulator.html">Simulator M-(abcd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Measuring.html">Measuring and Input</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Quantum Computing (extensions)
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Gates.html">
-   Gates
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ClassicalGates.html">
-     Classical Gates
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ControlledGates.html">
-     Controlled Gates
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Universal.html">
-     Gates for any Unitary
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="BQPinPSPACE.html">
-   BQP in PSPACE
-  </a>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NonAtomicGates.html">Non-atomic gates</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="PhaseEstimation.html">Phase estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QFT.html">Quantum Fourier Transform</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Shor-Overview.html">Shor’s Algorithm</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Shor-Classical.html">Shor’s Algorithm (classically)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shor-Quantum.html">Quantum Matrix</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Modular Multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shor-QuantumCircuit.html">Shor’s Algorithm</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ising Model
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/IsingModel.html">
-   Simulating an Ising Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/Measure.html">
-   Measuring the Ising Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/RG.html">
-   The Renormalization Group
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/ParallelTempering.html">
-   Extra Credit: Parallel Tempering
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ising/SimulatedAnnealing.html">
-   Extra Credit: Simulated Annealing
-  </a>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Machine Learning
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Computing (extensions)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/Hopfield.html">
-   Hopfield Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/RBM.html">
-   Restricted Boltzmann Machines
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ML/Diffusion.html">
-   Generative Diffusion Models
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Gates.html">Gates</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ClassicalGates.html">Classical Gates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ControlledGates.html">Controlled Gates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Universal.html">Gates for any Unitary</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Topological Insulators
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BQPinPSPACE.html">BQP in PSPACE</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ising Model</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/Lattice.html">
-   Lattices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/TightBinding.html">
-   Tight Binding Models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TI/ChernInsulators.html">
-   Topological Insulators
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/IsingModel.html">Simulating an Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/Measure.html">Measuring the Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/RG.html">The Renormalization Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/ParallelTempering.html">Extra Credit: Parallel Tempering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ising/SimulatedAnnealing.html">Extra Credit: Simulated Annealing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ML/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ML/Hopfield.html">Hopfield Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ML/RBM.html">Restricted Boltzmann Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ML/Diffusion.html">Generative Diffusion Models</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topological Insulators</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../TI/Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/Lattice.html">Lattices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/TightBinding.html">Tight Binding Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TI/ChernInsulators.html">Topological Insulators</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
 
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#our-approach">
-   Our approach
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#attempt-1">
-     Attempt 1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#addition-with-a-classical-b">
-     Addition (with a classical b)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#addition-with-two-quantum-inputs">
-     Addition (with two quantum inputs)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiplication-by-a-classical-b">
-     Multiplication by a classical
-     <span class="math notranslate nohighlight">
-      \(b\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiplication-by-a-quantum-b">
-     Multiplication by a quantum
-     <span class="math notranslate nohighlight">
-      \(b\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#putting-the-modular-back-in-addition">
-     Putting the modular back in addition.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#in-practice">
-     In Practice
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Modular Multiplication</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#our-approach">
-   Our approach
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#attempt-1">
-     Attempt 1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#addition-with-a-classical-b">
-     Addition (with a classical b)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#addition-with-two-quantum-inputs">
-     Addition (with two quantum inputs)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiplication-by-a-classical-b">
-     Multiplication by a classical
-     <span class="math notranslate nohighlight">
-      \(b\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiplication-by-a-quantum-b">
-     Multiplication by a quantum
-     <span class="math notranslate nohighlight">
-      \(b\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#putting-the-modular-back-in-addition">
-     Putting the modular back in addition.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#in-practice">
-     In Practice
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Modular Multiplication</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#our-approach">Our approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Modular  Multiplication</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attempt-1">Attempt 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-with-a-classical-b">Addition (with a classical b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-with-two-quantum-inputs">Addition (with two quantum inputs)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-by-a-classical-b">Multiplication by a classical <span class="math notranslate nohighlight">\(b\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-by-a-quantum-b">Multiplication by a quantum <span class="math notranslate nohighlight">\(b\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#putting-the-modular-back-in-addition">Putting the modular back in addition.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-practice">In Practice</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="modular-multiplication">
-<h1>Modular Multiplication<a class="headerlink" href="#modular-multiplication" title="Permalink to this headline">#</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="modular-multiplication">
+<h1>Modular Multiplication<a class="headerlink" href="#modular-multiplication" title="Permalink to this heading">#</a></h1>
 <p>As part of Shor’s algorithm, we need to perform a controlled version of <span class="math notranslate nohighlight">\(U_{x,N}\)</span>, which depends on <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(N\)</span>, where</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -562,42 +358,53 @@ U_{x,N} |y \rangle = |xy \textrm{ mod } N \rangle \text{ if } y &lt; N\\
 U_{x,N} |y \rangle = |y \rangle \textrm{ if }  y \geq N
 \end{split}\]</div>
 <p>There exists efficent (i.e. polynomial time) circuits which implement modular multiplication on a quantum computer.  Given such a circuit, it is then straightforward to generate a controlled-version of the gate (simply add a control-wire to each circuit element and decompose back into primitive gates - see the controlled-gate subsection of the univesality page for a more involved discussion of this.)</p>
-<p>That said, building this unitary out of H, P, and CNOT is somewhat painful (even arguing it can be done is somewhat painful although see the end of this page). One option is to find your favorite ECE friend and ask them to build you a reversible classical version of such a circuit out of Toffoli gates (which you can then promote to quantum gates). We will take a different approach here.</p>
-<div class="section" id="our-approach">
-<h2>Our approach<a class="headerlink" href="#our-approach" title="Permalink to this headline">#</a></h2>
+<p>That said, building this unitary out of H, P, and CNOT is somewhat painful (even arguing it can be done is somewhat painful although see the end of this page).</p>
+<!-- One option is to find your favorite ECE friend and ask them to build you a reversible classical version of such a circuit out of Toffoli gates (which you can then promote to quantum gates). -->
+<p>While it is possible (see the description below), we will accomplish this by adding a native gate to our simulator.</p>
+<section id="our-approach">
+<h2>Our approach<a class="headerlink" href="#our-approach" title="Permalink to this heading">#</a></h2>
 <p>The approach we actually recommend taking is to implement a controlled-classical <span class="math notranslate nohighlight">\(xy \mod N\)</span> gate into your simulator.</p>
 <p>They are also reasonably straightforward to implement.</p>
-<p><strong>For simulator Ic:</strong>
+<p><strong>For simulator S:</strong>
+Your simulator essentially works by taking basis elements and responding with the new basis element. Since python does modular multiplication this should be just as easy to add as any of the other gates.</p>
+<p><strong>For simulator M-b:</strong>
 In the previous section you’ve generated <span class="math notranslate nohighlight">\(U_{x,N}\)</span>.  It should be straigtforward to add this as a gate in a sparse fasion into your simulator.  Because it acts on a number of wires you just have to be careful to <code class="docutils literal notranslate"><span class="pre">kron</span></code> it against the right number of identities in the correct place.</p>
 <p>To get the control-<span class="math notranslate nohighlight">\(U_{x,N}\)</span> working is a bit trickier.  Essentially you have to figure out what the big unitary matrix for this gate will look like (it will be sparse) and then add it to your simulator.</p>
-<p><strong>For simulator II:</strong>
-Your simulator essentially works by taking basis elements and responding with the new basis element. Since python does modular multiplication this should be just as easy to add as any of the other gates.</p>
+<p><strong>If possible, we recommend avoiding using this simulator for this and instead using simulator S but it is your choice</strong></p>
 <p>In your circuit description you  should add</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNC</span> <span class="mi">4</span> <span class="mi">5</span> <span class="n">xyModN</span> <span class="mi">2</span> <span class="mi">15</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xyModN</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">2</span> <span class="mi">15</span>
 </pre></div>
 </div>
-<p>where  the first number is the first wire for the function, the next number is the number of wires for the function (so it works on lines 4,5,6,7,8), the “xyModN” is the name of the function in python, and everything after that is parameters to that function (in this case, <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(N\)</span>).</p>
+<p>where  the first number is the first wire for the function, the next number is the number of wires for the function (so it works on lines 4,5,6,7,8), and then comes <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(N\)</span>.</p>
 <p>The ctrl-f should work in the following way</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CFUNC</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="n">xyModN</span> <span class="mi">2</span> <span class="mi">15</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CxyModN</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">2</span> <span class="mi">15</span>
 </pre></div>
 </div>
-<p>where the first number is the control-bit (like the CNOT), the second number is the first wire for the function, the next number is the number of wires for the function, the “xyModN” is the name of the function in python, and everything after that is parameters to that function (in this case, <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(N\)</span>).</p>
+<p>where the first number is the control-bit (like the CNOT), the second number is the first wire for the function, the next number is the number of wires for the function, and then comes <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(N\)</span>.</p>
 <p>Implement these atomic gates into your simulator.</p>
 <div class="caution admonition">
 <p class="admonition-title">Grading</p>
 <p>Verify both the normal and controlled versions of xyModN  works by writing (two separate) circuit descriptions that uses them and then checking that it works on those descriptions.</p>
 </div>
+</section>
 <hr class="docutils" />
+<section id="id1">
+<h2>Modular  Multiplication<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Extra Credit</p>
+<p><strong>20 points extra credit</strong></p>
+<p>This section (everything below) is extra credit.</p>
+</div>
 <p>In this section, we are going to discuss how to get (or at least argue you can get) modular multiplication out of primitive gates.</p>
-<div class="section" id="attempt-1">
-<h3>Attempt 1<a class="headerlink" href="#attempt-1" title="Permalink to this headline">#</a></h3>
+<section id="attempt-1">
+<h3>Attempt 1<a class="headerlink" href="#attempt-1" title="Permalink to this heading">#</a></h3>
 <p>We have learned that (see the section in this book on “Classical Gates”) there is a general procedure which compiles a python function which takes <span class="math notranslate nohighlight">\(x\)</span> and gives back <span class="math notranslate nohighlight">\(f(x)\)</span> in time <span class="math notranslate nohighlight">\(O(T)\)</span> and generates a quantum circuit <span class="math notranslate nohighlight">\(U\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[U|x\rangle |0\rangle \rightarrow |x\rangle |f(x)\rangle\]</div>
 <p>which works in time <span class="math notranslate nohighlight">\(O(T \log T)\)</span> (and uses some extra ancilla it returns).  This is a super-useful primitive in general but doesn’t work here.  Keeping the <span class="math notranslate nohighlight">\(|x\rangle\)</span> around as part of the output is problematic.  The fact that it might be avoidable comes from the fact that the target <span class="math notranslate nohighlight">\(U\)</span> is reversible when <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(N\)</span> are coprime.</p>
-</div>
-<div class="section" id="addition-with-a-classical-b">
-<h3>Addition (with a classical b)<a class="headerlink" href="#addition-with-a-classical-b" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="addition-with-a-classical-b">
+<h3>Addition (with a classical b)<a class="headerlink" href="#addition-with-a-classical-b" title="Permalink to this heading">#</a></h3>
 <p>The first step on our quest is to figure out how to do addition. Let’s start off with taking <span class="math notranslate nohighlight">\(|a\rangle\)</span> and adding a fixed classical <span class="math notranslate nohighlight">\(b\)</span> (i.e. our circuit can depend on what <span class="math notranslate nohighlight">\(b\)</span> is).</p>
 <p><img alt="" src="QC/classicalAdd.png" /></p>
 <div class="caution admonition">
@@ -618,9 +425,9 @@ Your simulator essentially works by taking basis elements and responding with th
 </ul>
 <p>Answer these two questions and add them your document.</p>
 </div>
-</div>
-<div class="section" id="addition-with-two-quantum-inputs">
-<h3>Addition (with two quantum inputs)<a class="headerlink" href="#addition-with-two-quantum-inputs" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="addition-with-two-quantum-inputs">
+<h3>Addition (with two quantum inputs)<a class="headerlink" href="#addition-with-two-quantum-inputs" title="Permalink to this heading">#</a></h3>
 <p>Our next step is to do arithmetic with two quantum inputs.  In particular,</p>
 <div class="math notranslate nohighlight">
 \[|a\rangle |b\rangle \rightarrow |a\rangle |a+b \rangle\]</div>
@@ -631,9 +438,9 @@ Your simulator essentially works by taking basis elements and responding with th
 <p><img alt="" src="../_images/quantumAdd.png" /></p>
 <p>Again, also comment on what happens if you want to add numbers that are too big and if you run your code backwards.</p>
 </div>
-</div>
-<div class="section" id="multiplication-by-a-classical-b">
-<h3>Multiplication by a classical <span class="math notranslate nohighlight">\(b\)</span><a class="headerlink" href="#multiplication-by-a-classical-b" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="multiplication-by-a-classical-b">
+<h3>Multiplication by a classical <span class="math notranslate nohighlight">\(b\)</span><a class="headerlink" href="#multiplication-by-a-classical-b" title="Permalink to this heading">#</a></h3>
 <p>Suppose we want a unitary matrix that takes <span class="math notranslate nohighlight">\(U_b|a\rangle \rightarrow |ab\rangle\)</span>. There’s a simple algorithm which does this in time <span class="math notranslate nohighlight">\(O(b)\)</span>; simply add <span class="math notranslate nohighlight">\(a\)</span> to your register <span class="math notranslate nohighlight">\(b\)</span> times.  We would prefer to have an algorithm that works in time <span class="math notranslate nohighlight">\(O(\log(b))\)</span>.</p>
 <p>To accomplish this, we will use the fact that we can write <span class="math notranslate nohighlight">\(b=\sum_ i 2^i b_i\)</span> and that multiplying by <span class="math notranslate nohighlight">\(2^{i}\)</span> is reasonably straightforward.</p>
 <p>Use the following general approach:</p>
@@ -648,9 +455,9 @@ Your simulator essentially works by taking basis elements and responding with th
 <p class="admonition-title">Grading</p>
 <p>Write a python code which takes a number b and produces a quantum circuit which generates <span class="math notranslate nohighlight">\(U_b|a\rangle \rightarrow |ab\rangle\)</span></p>
 </div>
-</div>
-<div class="section" id="multiplication-by-a-quantum-b">
-<h3>Multiplication by a quantum <span class="math notranslate nohighlight">\(b\)</span><a class="headerlink" href="#multiplication-by-a-quantum-b" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="multiplication-by-a-quantum-b">
+<h3>Multiplication by a quantum <span class="math notranslate nohighlight">\(b\)</span><a class="headerlink" href="#multiplication-by-a-quantum-b" title="Permalink to this heading">#</a></h3>
 <div class="caution admonition">
 <p class="admonition-title">Grading</p>
 <p>Now you want to modify this code to take as input <span class="math notranslate nohighlight">\(|b\rangle\)</span> and <span class="math notranslate nohighlight">\(|a\rangle\)</span> and output <span class="math notranslate nohighlight">\(|ba\rangle\)</span>.  Essentially you are going to do the same thing as previously but now you want to control over the right wires of <span class="math notranslate nohighlight">\(b\)</span>.</p>
@@ -659,18 +466,22 @@ Your simulator essentially works by taking basis elements and responding with th
 <p class="admonition-title">Warning</p>
 <p>This section below here is not yet finished/polished.</p>
 </div>
-</div>
-<div class="section" id="putting-the-modular-back-in-addition">
-<h3>Putting the modular back in addition.<a class="headerlink" href="#putting-the-modular-back-in-addition" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="putting-the-modular-back-in-addition">
+<h3>Putting the modular back in addition.<a class="headerlink" href="#putting-the-modular-back-in-addition" title="Permalink to this heading">#</a></h3>
 <p>At the end of the day, we were attempting to get <span class="math notranslate nohighlight">\(|xy \mod N\rangle\)</span> but have so far avoiding dealing with the mod <span class="math notranslate nohighlight">\(N\)</span> component. You need to know figure out how to put the modular part of the modular arithmetic back in.</p>
+<div class="caution admonition">
+<p class="admonition-title">Grading</p>
+<p>Figure this out and demonstrate you can do generic modular multiplication.</p>
 </div>
+</section>
 <hr class="docutils" />
-<div class="section" id="in-practice">
-<h3>In Practice<a class="headerlink" href="#in-practice" title="Permalink to this headline">#</a></h3>
+<section id="in-practice">
+<h3>In Practice<a class="headerlink" href="#in-practice" title="Permalink to this heading">#</a></h3>
 <p>We have shown in principle that one could do this. In practice, often for specific values of <span class="math notranslate nohighlight">\(N\)</span> and specific system sizes one can do better.  For example, check out <span class="xref myst">https://arxiv.org/abs/1202.6614</span>.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -684,7 +495,7 @@ Your simulator essentially works by taking basis elements and responding with th
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./QC"
         },
         predefinedOutput: true
@@ -692,50 +503,112 @@ Your simulator essentially works by taking basis elements and responding with th
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Shor-Quantum.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Quantum Matrix</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Shor-Quantum.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Quantum Matrix</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="Shor-QuantumCircuit.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="Shor-QuantumCircuit.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Shor’s Algorithm</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#our-approach">Our approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Modular  Multiplication</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attempt-1">Attempt 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-with-a-classical-b">Addition (with a classical b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-with-two-quantum-inputs">Addition (with two quantum inputs)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-by-a-classical-b">Multiplication by a classical <span class="math notranslate nohighlight">\(b\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-by-a-quantum-b">Multiplication by a quantum <span class="math notranslate nohighlight">\(b\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#putting-the-modular-back-in-addition">Putting the modular back in addition.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-practice">In Practice</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Bryan Clark<br/>
-  
-      &copy; Copyright 2023.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Bryan Clark
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
