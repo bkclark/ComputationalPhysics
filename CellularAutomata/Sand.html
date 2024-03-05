@@ -307,7 +307,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -323,6 +325,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#video">Video</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -339,12 +349,12 @@ document.write(`
 <p>This page is <strong>20 points extra credit</strong></p>
 </div>
 <p>On this page you will simulate a model of sand building up on a table (and the resulting avalanches that it causes).</p>
-<p>In this model, sand will be placed on a table which has <span class="math notranslate nohighlight">\(N \times N\)</span> spaces for granules of sand.  The granules of sand can be stacked up into columns.  Once a column becomes larger then <span class="math notranslate nohighlight">\(k\)</span> granules high, 4 granules of sand slide off the pile with one granule ending up on each of the four neighbors.  If the column of sand is on the edge of the table without four neighbors it still ends up with 4 less pieces of sand;  the extra sand just falls off the table.</p>
+<p>In this model, sand will be placed on a table which has <span class="math notranslate nohighlight">\(N \times N\)</span> spaces for granules of sand.  The granules of sand can be stacked up into columns.  Once a column becomes larger then or equal to <span class="math notranslate nohighlight">\(k\)</span> granules high, 4 granules of sand slide off the pile with one granule ending up on each of the four neighbors.  If the column of sand is on the edge of the table without four neighbors it still ends up with 4 less pieces of sand;  the extra sand just falls off the table.</p>
 <p>For the first part of this problem, we are going to have sand rain from the sky onto random spots on the table.</p>
 <p>This gives us essentially a cellular automata with four rules:</p>
 <ul class="simple">
 <li><p>Choose a random spot on the table and add a new piece of sand</p></li>
-<li><p>While some column of sand has more then <span class="math notranslate nohighlight">\(k\)</span> pieces:</p>
+<li><p>While some column of sand has <span class="math notranslate nohighlight">\(\geq k\)</span> pieces:</p>
 <ul>
 <li><p>choose a random such column and replace it with <span class="math notranslate nohighlight">\(k-4\)</span> pieces of sand and increase the sand on each of its neighbors by one.</p></li>
 </ul>
@@ -357,7 +367,7 @@ document.write(`
 <p>Measure the following two properties using a <a class="reference external" href="https://en.wikipedia.org/wiki/Moving_average">window averaging</a> of 100 steps:</p>
 <ul class="simple">
 <li><p>the number of pieces of sand as a function of time.</p></li>
-<li><p>the size of each avalanch as a function of time.</p></li>
+<li><p>the size (number of columns of sand involved) of each avalanch as a function of time.</p></li>
 <li><p>a snapshot of the sand in equilibrium (i.e. after 1000 steps).</p></li>
 </ul>
 </div>
@@ -370,9 +380,10 @@ document.write(`
 <p><img alt="sand2.png" src="../_images/sand2.png" /></p>
 <p>(it would be fun to turn this into a video - it shouldn’t be too hard if you look up how animations work in pylab)</p>
 </div>
-<p>The number of avalanches actually follow a power law - i.e. the probability of an avalanch goes as <span class="math notranslate nohighlight">\(s^{-b}\)</span> where <span class="math notranslate nohighlight">\(s\)</span> is the size of the avalanch.  You should attempt to figure out the exponent <span class="math notranslate nohighlight">\(b\)</span>. The trick to do this is to look at the size <span class="math notranslate nohighlight">\(s\)</span> versus the number of such avalanches on a log-log plot. The slope will be <span class="math notranslate nohighlight">\(-b\)</span>.</p>
+<p>The number of avalanches actually follow a power law - i.e. the probability of an avalanch goes as <span class="math notranslate nohighlight">\(s^{-b}\)</span> where <span class="math notranslate nohighlight">\(s\)</span> is the size (number of columns of sand which avalanch) of the avalanch.  You should attempt to figure out the exponent <span class="math notranslate nohighlight">\(b\)</span>. The trick to do this is to look at the size <span class="math notranslate nohighlight">\(s\)</span> versus the number of such avalanches on a log-log plot. The slope will be <span class="math notranslate nohighlight">\(-b\)</span>.</p>
 <p>My graph looks like this:</p>
 <p><img alt="sand3.png" src="../_images/sand3.png" /></p>
+<p><strong>I should have labelled these axis as log(# of avalanches of a given size) vs log(size - i.e. # of columns of sand involved in avalanch)</strong></p>
 <div class="caution admonition">
 <p class="admonition-title">Grading</p>
 <p>Produce this plot and compute <span class="math notranslate nohighlight">\(b\)</span></p>
@@ -384,6 +395,9 @@ document.write(`
 <p><img alt="sand4.png" src="../_images/sand4.png" /></p>
 </div>
 <p>Not graded but You can also go ahead and do a sand-pile model for 1-dimension instead of 2-dimensions.  In many ways this is easier to visualize.</p>
+<section id="video">
+<h2>Video<a class="headerlink" href="#video" title="Permalink to this heading">#</a></h2>
+<iframe id="kmsembed-1_76xdyuc5" width="640" height="394" src="https://mediaspace.illinois.edu/embed/secure/iframe/entryId/1_76xdyuc5/uiConfId/26883701/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Physics 446: Cellular Automata Sand"></iframe></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -440,6 +454,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#video">Video</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
