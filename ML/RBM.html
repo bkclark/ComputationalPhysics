@@ -446,7 +446,6 @@ p(A,B) = p(A|B) p(B).
 \[
 p(A|B) p(B) = p(B|A) p(A),
 \]</div>
-<p>which holds whenever the joint distribution is symmetric, <span class="math notranslate nohighlight">\(p(A,B) = p(B,A)\)</span>.</p>
 <p><strong>Why are marginal and conditional probabilities important? Why did we not consider them in the Ising model unit?</strong></p>
 <p>The variables in an RBM are by design split into two groups, visible and hidden variables. When training an RBM, the visible variables are associated with data, such as the pixels in images, while the hidden variables are simply extra variables in the model, sometimes called auxiliary or latent variables. Because of the special interpretation of the visible variables, it is natural to consider the probability of just the visible spins, i.e., the marginal distribution <span class="math notranslate nohighlight">\(p(v)\)</span>. This marginal distribution is the probability distribution that we will want to match to a data set during training. This is why we care about marginal probabilities.</p>
 <p>An important technical detail about RBMs is that, because of the bipartite structure of the RBM, there is an efficient way to sample spin configurations using conditional probabilities <span class="math notranslate nohighlight">\(p(v|h)\)</span> and <span class="math notranslate nohighlight">\(p(h|v)\)</span>. This efficient sampling allows us to perform efficient training. This is why we care about conditional probabilities.</p>
